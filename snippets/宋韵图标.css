@@ -1,0 +1,189 @@
+/* 宋韵·清和 / Obsidian 图标组
+   独立片段：停用此片段即可恢复 Obsidian 原生图标。
+   图标源文件：.obsidian/themes/宋韵·清和/icons/
+*/
+
+body {
+  --song-icon-collection: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxyZWN0IHg9IjQuNyIgeT0iNC40IiB3aWR0aD0iMTQuNiIgaGVpZ2h0PSI0IiByeD0iMS4xIi8+CiAgICA8cmVjdCB4PSIzLjYiIHk9IjEwIiB3aWR0aD0iMTYuOCIgaGVpZ2h0PSI0IiByeD0iMS4xIi8+CiAgICA8cmVjdCB4PSI0LjciIHk9IjE1LjYiIHdpZHRoPSIxNC42IiBoZWlnaHQ9IjQiIHJ4PSIxLjEiLz4KICAgIDxwYXRoIGQ9Ik03LjQgNi40aDUuM003LjQgMTJoNy42TTcuNCAxNy42aDQuNyIgb3BhY2l0eT0iLjU4Ii8+CiAgPC9nPgo8L3N2Zz4K");
+  --song-icon-search: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxjaXJjbGUgY3g9IjEwLjIiIGN5PSIxMC40IiByPSI1LjQiLz4KICAgIDxwYXRoIGQ9Ik0xNC4yIDE0LjVsNC43IDQuNyIvPgogICAgPHBhdGggZD0iTTcuMSA5LjZjMS4xLTEuMSAyLjgtMS40IDQuMi0uNiIgb3BhY2l0eT0iLjU4Ii8+CiAgPC9nPgo8L3N2Zz4K");
+  --song-icon-graph: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik02LjUgMTUuNmMxLjUtMi43IDMuMi01LjQgNC44LTcuNE0xMy4zIDcuNGMxLjkgMiAzLjggNC4zIDQuOCA2LjMiLz4KICAgIDxwYXRoIGQ9Ik03LjIgMTcuNWMzLjUuNSA3IC4zIDkuOC0uOSIgb3BhY2l0eT0iLjU1Ii8+CiAgICA8Y2lyY2xlIGN4PSI1LjciIGN5PSIxNy40IiByPSIxLjYiIGZpbGw9IiMwMDAiIHN0cm9rZT0ibm9uZSIvPgogICAgPGNpcmNsZSBjeD0iMTIuMiIgY3k9IjYuMiIgcj0iMS44IiBmaWxsPSIjMDAwIiBzdHJva2U9Im5vbmUiLz4KICAgIDxjaXJjbGUgY3g9IjE4LjUiIGN5PSIxNSIgcj0iMS40IiBmaWxsPSIjMDAwIiBzdHJva2U9Im5vbmUiLz4KICA8L2c+Cjwvc3ZnPgo=");
+  --song-icon-canvas: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik01LjQgNWgxMy4ydjE0SDUuNFoiLz4KICAgIDxwYXRoIGQ9Ik0zLjIgNy40YzEuMiAwIDIgLjggMiAyLjF2NWMwIDEuMy0uOCAyLjEtMiAyLjFNMjAuOCA3LjRjLTEuMiAwLTIgLjgtMiAyLjF2NWMwIDEuMy44IDIuMSAyIDIuMSIvPgogICAgPHBhdGggZD0iTTguMyA4LjloNC40TTguMyAxMS44aDcuNE04LjMgMTQuN2g1LjQiIG9wYWNpdHk9Ii41NSIvPgogIDwvZz4KPC9zdmc+Cg==");
+  --song-icon-daily: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iNy4yIiByPSIzLjMiLz4KICAgIDxwYXRoIGQ9Ik00LjMgMTYuNGMyLjMtMi4yIDQuMi0xLjQgNi4xLjUgMS44LTIuNCAzLjgtMyA1LjctMS4zIDEuMyAxLjEgMi40IDEuNSA0IDEuNiIvPgogICAgPHBhdGggZD0iTTQuMiAxOS4yaDE1LjYiIG9wYWNpdHk9Ii41NSIvPgogIDwvZz4KPC9zdmc+Cg==");
+  --song-icon-templates: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik04LjIgNC43aDYuNWwzLjYgMy42djExLjFIOC4yWiIvPgogICAgPHBhdGggZD0iTTE0LjUgNC45djMuNmgzLjUiLz4KICAgIDxwYXRoIGQ9Ik00LjMgOC40aDcuMnYxMS4xSDQuM1oiIG9wYWNpdHk9Ii42MiIvPgogICAgPHBhdGggZD0iTTYuMyAxMi4yaDMuMk02LjMgMTUuMWgyLjMiIG9wYWNpdHk9Ii41NSIvPgogIDwvZz4KPC9zdmc+Cg==");
+  --song-icon-command: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik01IDQuN2g5LjRMMTkgOS40djkuOUg1WiIvPgogICAgPHBhdGggZD0iTTE0LjIgNC45djQuNmg0LjUiIG9wYWNpdHk9Ii41NSIvPgogICAgPHBhdGggZD0iTTcuOSAxMS4ybDIuMyAyLTIuMyAyTTExLjggMTUuM2g0Ii8+CiAgPC9nPgo8L3N2Zz4K");
+  --song-icon-workspace: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxyZWN0IHg9IjMuOCIgeT0iNC44IiB3aWR0aD0iMTYuNCIgaGVpZ2h0PSIxNC40IiByeD0iMS4yIi8+CiAgICA8cGF0aCBkPSJNMy44IDEwLjNoMTYuNE05LjIgNC44djE0LjRNMTQuNyA0Ljh2MTQuNCIgb3BhY2l0eT0iLjYyIi8+CiAgICA8cGF0aCBkPSJNMTYuOSA3LjFoMS4yIiBvcGFjaXR5PSIuNyIvPgogIDwvZz4KPC9zdmc+Cg==");
+  --song-icon-table: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxyZWN0IHg9IjMuNiIgeT0iNC45IiB3aWR0aD0iMTYuOCIgaGVpZ2h0PSIxNC4yIiByeD0iMS4yIi8+CiAgICA8cGF0aCBkPSJNMy42IDkuNGgxNi44TTMuNiAxNC41aDE2LjhNOS4zIDQuOXYxNC4yTTE1LjIgNC45djE0LjIiIG9wYWNpdHk9Ii42NiIvPgogICAgPHBhdGggZD0iTTUuNyA3LjJoMiIgb3BhY2l0eT0iLjY1Ii8+CiAgPC9nPgo8L3N2Zz4K");
+  --song-icon-git: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik02LjUgMTguMlY2LjMiLz4KICAgIDxwYXRoIGQ9Ik02LjUgMTAuOWMzLjktLjIgNi44LTEuNyA4LjEtNC4yIi8+CiAgICA8cGF0aCBkPSJNNi41IDE0LjdjMy4yLS4xIDUuNiAxIDcgMy4xIi8+CiAgICA8Y2lyY2xlIGN4PSI2LjUiIGN5PSI0LjciIHI9IjEuNSIgZmlsbD0iIzAwMCIgc3Ryb2tlPSJub25lIi8+CiAgICA8Y2lyY2xlIGN4PSIxNS40IiBjeT0iNS44IiByPSIxLjQiIGZpbGw9IiMwMDAiIHN0cm9rZT0ibm9uZSIvPgogICAgPGNpcmNsZSBjeD0iMTQuMiIgY3k9IjE4LjIiIHI9IjEuNCIgZmlsbD0iIzAwMCIgc3Ryb2tlPSJub25lIi8+CiAgPC9nPgo8L3N2Zz4K");
+  --song-icon-reader: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0xMiA2LjVDOS44IDUuMSA3LjIgNC42IDQuNyA1djEzYzIuNi0uMiA1LjEuMiA3LjMgMS42IDIuMi0xLjQgNC43LTEuOCA3LjMtMS42VjVjLTIuNS0uNC01LjEuMS03LjMgMS41WiIvPgogICAgPHBhdGggZD0iTTEyIDYuNnYxMyIvPgogICAgPHBhdGggZD0iTTcuMiA5LjRjMSAuMSAyIC4zIDIuOS43TTcuMiAxMi4zYzEgLjEgMiAuMyAyLjkuNyIgb3BhY2l0eT0iLjU1Ii8+CiAgPC9nPgo8L3N2Zz4K");
+  --song-icon-draw: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik00LjggMTguOWMyLjguMyA1LjEtLjYgNy0yLjQgMi4xLTIuMSAzLjUtNS4xIDUuMy03LjkiLz4KICAgIDxwYXRoIGQ9Ik0xNiA0LjVjMS4yLTEgMi43LS44IDMuMy40LjYgMS4yLS4xIDIuNC0xLjEgMy4yLS43LjYtMS40IDEtMiAxLjQtMS4xLS41LTEuNy0xLjEtMS45LTIuMi4zLS45LjktMS45IDEuNy0yLjhaIi8+CiAgICA8cGF0aCBkPSJNNi4yIDE3LjFjMS4yLS4yIDIuMS0uMSAzIC4zIiBvcGFjaXR5PSIuNTUiLz4KICA8L2c+Cjwvc3ZnPgo=");
+  --song-icon-compose: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik00LjggNC45aDkuNnYxNC4ySDQuOFoiLz4KICAgIDxwYXRoIGQ9Ik03LjMgOC4yaDQuN003LjMgMTEuNGgzLjciIG9wYWNpdHk9Ii41NSIvPgogICAgPHBhdGggZD0iTTE0IDE1LjZjMi42LS43IDQuMy0yLjcgNC44LTUuNC4zLTEuNyAxLTIuNyAyLTMuNCIvPgogICAgPHBhdGggZD0iTTIwLjIgNC4yYzEuMi4yIDEuOCAxLjIgMS41IDIuMy0uMyAxLTEuMiAxLjctMi4yIDIuMSIgb3BhY2l0eT0iLjciLz4KICA8L2c+Cjwvc3ZnPgo=");
+  --song-icon-folder-plus: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0zLjggNy4xaDUuOGwxLjggMi4xaDguOHY5LjZIMy44WiIvPgogICAgPHBhdGggZD0iTTEyIDExLjV2NU05LjUgMTRoNSIvPgogIDwvZz4KPC9zdmc+Cg==");
+  --song-icon-settings: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjYuNyIvPgogICAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMi4zIi8+CiAgICA8cGF0aCBkPSJNMTIgMy43djEuOE0xMiAxOC41djEuOE0zLjcgMTJoMS44TTE4LjUgMTJoMS44TTYuMSA2LjFsMS4zIDEuM00xNi42IDE2LjZsMS4zIDEuM00xNy45IDYuMWwtMS4zIDEuM003LjQgMTYuNmwtMS4zIDEuMyIvPgogIDwvZz4KPC9zdmc+Cg==");
+}
+
+/* 隐藏 SVG 后，手动恢复 Ribbon 按钮的点击区与行距。 */
+.side-dock-ribbon-action {
+  box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+  min-height: 34px;
+  margin-block: 3px;
+}
+
+/* 隐藏原图标，并在同一按钮位置绘制宋韵图标。 */
+.side-dock-ribbon-action:has(svg.lucide-layout-list) > svg,
+.side-dock-ribbon-action:has(svg.lucide-file-search) > svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-search) > svg,
+.side-dock-ribbon-action:has(svg.lucide-git-fork) > svg,
+.side-dock-ribbon-action:has(svg.lucide-layout-dashboard) > svg,
+.side-dock-ribbon-action:has(svg.lucide-calendar) > svg,
+.side-dock-ribbon-action:has(svg.lucide-files) > svg,
+.side-dock-ribbon-action:has(svg.templater-icon) > svg,
+.side-dock-ribbon-action:has(svg.lucide-terminal) > svg,
+.side-dock-ribbon-action:has(svg.lucide-layout) > svg,
+.side-dock-ribbon-action:has(svg.spreadsheet) > svg,
+.side-dock-ribbon-action:has(svg.lucide-git-pull-request) > svg,
+.side-dock-ribbon-action:has(svg.lucide-book-open) > svg,
+.side-dock-ribbon-action:has(svg.excalidraw-icon) > svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-edit) > svg,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit) > svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus) > svg,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus) > svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-settings) > svg,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) > svg {
+  display: none !important;
+}
+
+.side-dock-ribbon-action:has(svg.lucide-layout-list),
+.side-dock-ribbon-action:has(svg.lucide-file-search),
+.nav-buttons-container .clickable-icon:has(svg.lucide-search),
+.side-dock-ribbon-action:has(svg.lucide-git-fork),
+.side-dock-ribbon-action:has(svg.lucide-layout-dashboard),
+.side-dock-ribbon-action:has(svg.lucide-calendar),
+.side-dock-ribbon-action:has(svg.lucide-files),
+.side-dock-ribbon-action:has(svg.templater-icon),
+.side-dock-ribbon-action:has(svg.lucide-terminal),
+.side-dock-ribbon-action:has(svg.lucide-layout),
+.side-dock-ribbon-action:has(svg.spreadsheet),
+.side-dock-ribbon-action:has(svg.lucide-git-pull-request),
+.side-dock-ribbon-action:has(svg.lucide-book-open),
+.side-dock-ribbon-action:has(svg.excalidraw-icon),
+.nav-buttons-container .clickable-icon:has(svg.lucide-edit),
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit),
+.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus),
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus),
+.nav-buttons-container .clickable-icon:has(svg.lucide-settings),
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
+  position: relative;
+}
+
+.side-dock-ribbon-action:has(svg.lucide-layout-list)::after,
+.side-dock-ribbon-action:has(svg.lucide-file-search)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-search)::after,
+.side-dock-ribbon-action:has(svg.lucide-git-fork)::after,
+.side-dock-ribbon-action:has(svg.lucide-layout-dashboard)::after,
+.side-dock-ribbon-action:has(svg.lucide-calendar)::after,
+.side-dock-ribbon-action:has(svg.lucide-files)::after,
+.side-dock-ribbon-action:has(svg.templater-icon)::after,
+.side-dock-ribbon-action:has(svg.lucide-terminal)::after,
+.side-dock-ribbon-action:has(svg.lucide-layout)::after,
+.side-dock-ribbon-action:has(svg.spreadsheet)::after,
+.side-dock-ribbon-action:has(svg.lucide-git-pull-request)::after,
+.side-dock-ribbon-action:has(svg.lucide-book-open)::after,
+.side-dock-ribbon-action:has(svg.excalidraw-icon)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-edit)::after,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus)::after,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  background-color: currentColor;
+  -webkit-mask: var(--song-icon-current) center / contain no-repeat;
+  mask: var(--song-icon-current) center / contain no-repeat;
+  pointer-events: none;
+  opacity: .92;
+}
+
+.nav-buttons-container .clickable-icon:has(svg.lucide-search)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-edit)::after,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus)::after,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
+  width: 16px;
+  height: 16px;
+  opacity: .82;
+}
+
+/* 指定每个入口使用的图标。 */
+.side-dock-ribbon-action:has(svg.lucide-layout-list) {
+  --song-icon-current: var(--song-icon-collection);
+}
+
+.side-dock-ribbon-action:has(svg.lucide-file-search),
+.nav-buttons-container .clickable-icon:has(svg.lucide-search) {
+  --song-icon-current: var(--song-icon-search);
+}
+
+.side-dock-ribbon-action:has(svg.lucide-git-fork) {
+  --song-icon-current: var(--song-icon-graph);
+}
+
+.side-dock-ribbon-action:has(svg.lucide-layout-dashboard) {
+  --song-icon-current: var(--song-icon-canvas);
+}
+
+.side-dock-ribbon-action:has(svg.lucide-calendar) {
+  --song-icon-current: var(--song-icon-daily);
+}
+
+.side-dock-ribbon-action:has(svg.lucide-files),
+.side-dock-ribbon-action:has(svg.templater-icon) {
+  --song-icon-current: var(--song-icon-templates);
+}
+
+.side-dock-ribbon-action:has(svg.lucide-terminal) {
+  --song-icon-current: var(--song-icon-command);
+}
+
+.side-dock-ribbon-action:has(svg.lucide-layout) {
+  --song-icon-current: var(--song-icon-workspace);
+}
+
+.side-dock-ribbon-action:has(svg.spreadsheet) {
+  --song-icon-current: var(--song-icon-table);
+}
+
+.side-dock-ribbon-action:has(svg.lucide-git-pull-request) {
+  --song-icon-current: var(--song-icon-git);
+}
+
+.side-dock-ribbon-action:has(svg.lucide-book-open) {
+  --song-icon-current: var(--song-icon-reader);
+}
+
+.side-dock-ribbon-action:has(svg.excalidraw-icon) {
+  --song-icon-current: var(--song-icon-draw);
+}
+
+.nav-buttons-container .clickable-icon:has(svg.lucide-edit),
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit) {
+  --song-icon-current: var(--song-icon-compose);
+}
+
+.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus),
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus) {
+  --song-icon-current: var(--song-icon-folder-plus);
+}
+
+.nav-buttons-container .clickable-icon:has(svg.lucide-settings),
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
+  --song-icon-current: var(--song-icon-settings);
+}

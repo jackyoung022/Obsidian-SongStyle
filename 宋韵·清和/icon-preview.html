@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>宋韵·清和 — Obsidian 图标系统</title>
+  <style>
+    :root {
+      --paper: #f8f3e9;
+      --paper-deep: #ede6d9;
+      --ink: #302a24;
+      --ink-soft: #514a42;
+      --muted: #6e6358;
+      --line: #d8cdbd;
+      --rouge: #8c2f2d;
+      --rouge-light: #b76f6a;
+      --celadon: #b7c5b7;
+      --serif: "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+      --sans: "Alibaba PuHuiTi 2.0", "PingFang SC", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      background-color: var(--paper);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='5' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .333 .334 .333 0 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.14'/%3E%3C/svg%3E");
+    }
+
+    main {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 88px 0 120px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 32px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      color: var(--rouge);
+      font: 500 11px/1.5 var(--sans);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font: 600 clamp(38px, 6vw, 72px)/1.16 var(--serif);
+      letter-spacing: .06em;
+    }
+
+    .lede {
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font: 400 14px/1.9 var(--sans);
+    }
+
+    .seal {
+      display: grid;
+      width: 62px;
+      height: 62px;
+      place-items: center;
+      color: var(--rouge);
+      border: 1px solid currentColor;
+      font: 600 25px/1 var(--serif);
+      transform: rotate(2deg);
+    }
+
+    section { margin-top: 76px; }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font: 600 23px/1.4 var(--serif);
+      letter-spacing: .04em;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font: 400 12px/1.7 var(--sans);
+    }
+
+    .variants {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .variant {
+      min-height: 270px;
+      padding: 28px;
+      background: rgba(248, 243, 233, .93);
+    }
+
+    .variant.is-picked {
+      box-shadow: inset 0 3px 0 var(--rouge);
+      background:
+        linear-gradient(180deg, rgba(183, 197, 183, .15), transparent 42%),
+        rgba(248, 243, 233, .95);
+    }
+
+    .variant-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 26px;
+    }
+
+    .variant-icon {
+      width: 54px;
+      height: 54px;
+      color: var(--ink);
+    }
+
+    .variant-index {
+      color: var(--rouge);
+      font: 500 11px/1 var(--sans);
+      letter-spacing: .12em;
+    }
+
+    .variant h3 {
+      margin: 0 0 5px;
+      font: 600 18px/1.4 var(--serif);
+      letter-spacing: .04em;
+    }
+
+    .variant small {
+      color: var(--rouge-light);
+      font: 500 10px/1.4 var(--sans);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .variant p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font: 400 12.5px/1.75 var(--sans);
+    }
+
+    .picked-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 15px;
+      color: var(--rouge);
+      font-size: 11px;
+      letter-spacing: .08em;
+    }
+
+    .icon-mask {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: currentColor;
+      -webkit-mask: var(--icon) center / contain no-repeat;
+      mask: var(--icon) center / contain no-repeat;
+    }
+
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .icon-item {
+      display: grid;
+      min-height: 158px;
+      place-items: center;
+      padding: 24px 14px;
+      background: rgba(248, 243, 233, .93);
+      text-align: center;
+      transition: background-color .18s ease, color .18s ease;
+    }
+
+    .icon-item:hover {
+      color: var(--rouge);
+      background: rgba(183, 197, 183, .2);
+    }
+
+    .icon-item .icon-mask {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto 15px;
+    }
+
+    .icon-item strong {
+      display: block;
+      font: 600 14px/1.35 var(--serif);
+      letter-spacing: .04em;
+    }
+
+    .icon-item span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font: 400 10px/1.4 var(--sans);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .ui-preview {
+      display: grid;
+      grid-template-columns: 58px 274px 1fr;
+      min-height: 470px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(248, 243, 233, .9);
+    }
+
+    .mock-ribbon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 12px 8px;
+      border-right: 1px solid var(--line);
+      background: var(--paper-deep);
+    }
+
+    .mock-action {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      color: var(--muted);
+      border-radius: 3px;
+    }
+
+    .mock-action .icon-mask {
+      width: 19px;
+      height: 19px;
+    }
+
+    .mock-action.is-active {
+      color: var(--rouge);
+      background: rgba(140, 47, 45, .1);
+      box-shadow: inset 2px 0 0 var(--rouge);
+    }
+
+    .mock-sidebar {
+      padding: 22px 20px;
+      border-right: 1px solid var(--line);
+      background: rgba(237, 230, 217, .78);
+    }
+
+    .mock-vault {
+      margin-bottom: 23px;
+      font: 600 14px/1.4 var(--serif);
+      letter-spacing: .04em;
+    }
+
+    .mock-tools {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 22px;
+      color: var(--muted);
+    }
+
+    .mock-tools .icon-mask {
+      width: 17px;
+      height: 17px;
+    }
+
+    .mock-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 30px;
+      margin: 0 -8px;
+      padding: 0 8px;
+      color: var(--ink-soft);
+      font-size: 12px;
+    }
+
+    .mock-row.is-current {
+      color: var(--rouge);
+      background: linear-gradient(90deg, rgba(140, 47, 45, .12), transparent);
+      box-shadow: inset 2px 0 0 var(--rouge);
+    }
+
+    .mock-chevron {
+      width: 10px;
+      color: var(--celadon);
+      font-size: 10px;
+    }
+
+    .mock-doc {
+      padding: clamp(40px, 7vw, 84px);
+    }
+
+    .mock-doc h3 {
+      margin: 0 0 10px;
+      font: 600 34px/1.35 var(--serif);
+      letter-spacing: .05em;
+    }
+
+    .mock-doc h4 {
+      margin: 24px 0 12px;
+      padding-left: 10px;
+      color: var(--ink);
+      border-left: 3px solid var(--celadon);
+      font: 600 20px/1.5 var(--serif);
+    }
+
+    .mock-doc p {
+      max-width: 580px;
+      color: var(--ink-soft);
+      font: 400 14px/1.9 var(--sans);
+    }
+
+    .mock-doc blockquote {
+      margin: 24px 0;
+      padding: 12px 16px;
+      color: var(--ink-soft);
+      border-left: 2px solid var(--rouge);
+      background: linear-gradient(90deg, rgba(183, 197, 183, .2), transparent);
+      font: 400 14px/1.8 var(--serif);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 58px;
+      padding-top: 22px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    code {
+      font-family: "JetBrains Mono", "SFMono-Regular", monospace;
+      font-size: .92em;
+    }
+
+    @media (max-width: 820px) {
+      .variants { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .icon-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .ui-preview { grid-template-columns: 48px 1fr; }
+      .mock-sidebar { display: none; }
+      header { grid-template-columns: 1fr; }
+      .seal { display: none; }
+    }
+
+    @media (max-width: 520px) {
+      main { width: min(100% - 28px, 1120px); padding-top: 54px; }
+      .variants, .icon-grid { grid-template-columns: 1fr; }
+      .ui-preview { grid-template-columns: 44px 1fr; }
+      .mock-doc { padding: 30px 22px; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <div class="eyebrow">Songyun Qinghe · Obsidian Icon System</div>
+        <h1>宋韵图标</h1>
+        <p class="lede">以宋版册页的边框、竹简的竖线、窗棂的格律和器物的留白为线索。保持 24×24 网格与单色线描，让图标在小尺寸下仍然清楚，选中时继承朱砂色。</p>
+      </div>
+      <div class="seal">宋</div>
+    </header>
+
+    <section>
+      <div class="section-head">
+        <h2>核心方向 · 文件与笔记</h2>
+        <p class="section-note">六个独立构图，不是同一形状的参数变化</p>
+      </div>
+      <div class="variants">
+        <article class="variant">
+          <div class="variant-top">
+            <div class="variant-icon"><span class="icon-mask" style="--icon:url('icons/variants/file-01-bamboo.svg')"></span></div>
+            <span class="variant-index">01</span>
+          </div>
+          <h3>竹简</h3>
+          <small>Bamboo slips</small>
+          <p>三列简牍与横向编绳，秩序最强，也最有东方辨识度。适合偏典籍、资料型的知识库。</p>
+        </article>
+        <article class="variant">
+          <div class="variant-top">
+            <div class="variant-icon"><span class="icon-mask" style="--icon:url('icons/variants/file-02-scroll.svg')"></span></div>
+            <span class="variant-index">02</span>
+          </div>
+          <h3>卷轴</h3>
+          <small>Handscroll</small>
+          <p>两端卷起、中间留白，舒展而安静。最接近阅读与长文的气质，但文件语义稍弱。</p>
+        </article>
+        <article class="variant is-picked">
+          <div class="variant-top">
+            <div class="variant-icon"><span class="icon-mask" style="--icon:url('icons/variants/file-03-book.svg')"></span></div>
+            <span class="variant-index">03</span>
+          </div>
+          <h3>册页</h3>
+          <small>Stitched album</small>
+          <p>左右页与轻微不对称的书脊，兼顾文件识别和宋式书卷气。作为默认方向，最耐看。</p>
+          <div class="picked-mark">● 默认采用</div>
+        </article>
+        <article class="variant">
+          <div class="variant-top">
+            <div class="variant-icon"><span class="icon-mask" style="--icon:url('icons/variants/file-04-lattice.svg')"></span></div>
+            <span class="variant-index">04</span>
+          </div>
+          <h3>窗棂</h3>
+          <small>Lattice window</small>
+          <p>来自宋式木窗的方格与细线，结构感强，适合多栏布局，但更像“空间”而非“文章”。</p>
+        </article>
+        <article class="variant">
+          <div class="variant-top">
+            <div class="variant-icon"><span class="icon-mask" style="--icon:url('icons/variants/file-05-seal.svg')"></span></div>
+            <span class="variant-index">05</span>
+          </div>
+          <h3>方印</h3>
+          <small>Square seal</small>
+          <p>带缺口的方印与简化的“文”字，印记感最强。适合作为收藏或数据库类入口。</p>
+        </article>
+        <article class="variant">
+          <div class="variant-top">
+            <div class="variant-icon"><span class="icon-mask" style="--icon:url('icons/variants/file-06-mountain.svg')"></span></div>
+            <span class="variant-index">06</span>
+          </div>
+          <h3>山笺</h3>
+          <small>Mountain note</small>
+          <p>纸笺、远山与一轮小日。诗意最浓，但作为通用文件图标会牺牲一点识别速度。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>默认图标组</h2>
+        <p class="section-note">16 枚 · 24×24 · 1.7px 线宽 · currentColor</p>
+      </div>
+      <div class="icon-grid">
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/collection.svg')"></div><strong>收藏</strong><span>Collection</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/files.svg')"></div><strong>文件</strong><span>Files</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/search.svg')"></div><strong>搜索</strong><span>Search</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/graph.svg')"></div><strong>关系图</strong><span>Graph</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/canvas.svg')"></div><strong>白板</strong><span>Canvas</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/daily.svg')"></div><strong>日记</strong><span>Daily note</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/templates.svg')"></div><strong>模板</strong><span>Templates</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/command.svg')"></div><strong>命令</strong><span>Command</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/workspace.svg')"></div><strong>工作区</strong><span>Workspace</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/table.svg')"></div><strong>表格</strong><span>Table</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/git.svg')"></div><strong>版本</strong><span>Git</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/reader.svg')"></div><strong>阅读</strong><span>Reader</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/draw.svg')"></div><strong>绘图</strong><span>Draw</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/compose.svg')"></div><strong>新建笔记</strong><span>Compose</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/folder-plus.svg')"></div><strong>新建文件夹</strong><span>Folder +</span></div></div>
+        <div class="icon-item"><div><div class="icon-mask" style="--icon:url('icons/settings.svg')"></div><strong>设置</strong><span>Settings</span></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>界面预览</h2>
+        <p class="section-note">默认、悬停与选中都继承主题文字色</p>
+      </div>
+      <div class="ui-preview">
+        <div class="mock-ribbon">
+          <div class="mock-action is-active"><span class="icon-mask" style="--icon:url('icons/collection.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/search.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/graph.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/canvas.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/daily.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/templates.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/command.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/workspace.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/table.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/git.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/draw.svg')"></span></div>
+          <div class="mock-action"><span class="icon-mask" style="--icon:url('icons/reader.svg')"></span></div>
+        </div>
+        <div class="mock-sidebar">
+          <div class="mock-vault">JackOBSIDIAN</div>
+          <div class="mock-tools">
+            <span class="icon-mask" style="--icon:url('icons/compose.svg')"></span>
+            <span class="icon-mask" style="--icon:url('icons/folder-plus.svg')"></span>
+          </div>
+          <div class="mock-row"><span class="mock-chevron">▾</span><span>技术手册</span></div>
+          <div class="mock-row"><span class="mock-chevron">▾</span><span>学习笔记</span></div>
+          <div class="mock-row is-current"><span class="mock-chevron">▾</span><span>Blog</span></div>
+          <div class="mock-row" style="padding-left:26px"><span>关于工作流</span></div>
+          <div class="mock-row" style="padding-left:26px"><span>2025 年总结</span></div>
+          <div class="mock-row"><span class="mock-chevron">▸</span><span>Books</span></div>
+        </div>
+        <div class="mock-doc">
+          <h3>宋韵·清和</h3>
+          <h4>一、留白与秩序</h4>
+          <p>图标不是纹样，而是界面里的标点。它们应当让步于文字，只在需要时留下清晰的提示。</p>
+          <blockquote>器以载道，图标也一样：形式克制，功能清楚。</blockquote>
+          <p>选中时使用朱砂色，平常保持墨色；来自同一套 24px 网格与线宽，所以不会显得东拼西凑。</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>宋韵·清和 / Obsidian 图标组<br>SVG source: <code>.obsidian/themes/宋韵·清和/icons/</code></div>
+      <div>采用册页方向作为默认<br>可在主题 CSS 中按需替换</div>
+    </footer>
+  </main>
+</body>
+</html>
