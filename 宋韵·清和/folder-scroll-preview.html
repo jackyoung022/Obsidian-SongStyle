@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>宋韵 · 双卷开合</title>
+  <!-- 延用 logo-generator showcase_template 的留白、图标卡片和微排版，改为离线双态预览。 -->
+  <style>
+    :root { color-scheme:light; --paper:#F8F3E9; --ink:#302A24; --muted:#6E6358; --line:#D8CDBD; --green:#7F9984; --accent:#8C2F2D; }
+    :root[data-mode="dark"] { color-scheme:dark; --paper:#2B3744; --ink:#F1EADF; --muted:#ADB7BF; --line:#4F6072; --green:#8DB8A7; --accent:#E0A18D; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.8 "PingFang SC",sans-serif; }
+    main { max-width:980px; margin:auto; padding:64px 28px; }
+    header { display:flex; justify-content:space-between; gap:24px; align-items:start; border-bottom:1px solid var(--line); padding-bottom:28px; }
+    .eyebrow { font:11px/1.5 monospace; letter-spacing:.2em; color:var(--accent); }
+    h1 { font:500 42px/1.4 "Songti SC",serif; margin:12px 0; }
+    p { color:var(--muted); }
+    button { background:transparent; border:1px solid var(--line); color:var(--ink); padding:8px 14px; cursor:pointer; border-radius:4px; }
+    button:focus-visible, summary:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:38px 0; }
+    .logo-card { border:1px solid var(--line); border-radius:5px; padding:24px; transition:transform .18s; }
+    .logo-card:hover { transform:translateY(-3px); }
+    .logo-canvas { height:170px; display:grid; place-items:center; color:var(--green); }
+    svg { display:block; width:100%; height:100%; }
+    .large { width:100px; height:100px; }
+    h2 { font:500 23px/1.5 "Songti SC",serif; }
+    .sizes { display:flex; gap:26px; align-items:end; }
+    .size { text-align:center; font:11px/1.6 monospace; color:var(--muted); }
+    .size span { display:block; margin:0 auto 12px; color:var(--green); }
+    .demo { border-block:1px solid var(--line); padding:24px 0; }
+    details { margin:10px 0; }
+    summary { display:flex; align-items:center; gap:9px; cursor:pointer; list-style:none; }
+    summary::-webkit-details-marker { display:none; }
+    .state-icon { width:18px; height:18px; color:var(--green); flex:0 0 18px; }
+    .opened { display:none; }
+    details[open] > summary .closed { display:none; }
+    details[open] > summary .opened { display:block; }
+    .children { border-left:1px solid var(--line); padding:1px 0 1px 24px; margin:8px 0 8px 9px; }
+    a { color:var(--accent); text-underline-offset:3px; }
+    @media(max-width:640px) { .grid { grid-template-columns:1fr; } h1 { font-size:32px; } }
+    @media(prefers-reduced-motion:reduce) { * { transition:none !important; } }
+  </style>
+</head>
+<body>
+<main>
+  <header><div><div class="eyebrow">SONGYUN · FOLDER STATES</div><h1>双卷开合</h1><p>收起时双卷靠拢，展开时双卷分开，露出书写的纸面。</p></div><button id="mode" type="button">切换深色</button></header>
+  <div class="grid">
+    <article class="logo-card"><div class="logo-canvas"><div class="large" data-icon="closed"></div></div><h2>卷合 · 收起</h2><p>保留左右卷轴，中间仅露一线纸边。双卷朝中间收拢。</p><div class="sizes" data-sizes="closed"></div><p><a href="icons/folder-scroll-closed.svg" download>下载 SVG</a></p></article>
+    <article class="logo-card"><div class="logo-canvas"><div class="large" data-icon="open"></div></div><h2>舒卷 · 展开</h2><p>左右卷轴向两侧打开，中间出现两行简化的文字。</p><div class="sizes" data-sizes="open"></div><p><a href="icons/folder-scroll-open.svg" download>下载 SVG</a></p></article>
+  </div>
+  <section class="demo"><h2>点击书卷，试试开合</h2><details><summary><span class="state-icon closed" data-icon="closed"></span><span class="state-icon opened" data-icon="open"></span>读书札记</summary><div class="children"><details><summary><span class="state-icon closed" data-icon="closed"></span><span class="state-icon opened" data-icon="open"></span>诗词摘录</summary><div class="children">山静似太古.md</div></details><p>灯下观书.md</p></div></details></section>
+  <p>实际侧栏图标为 18px，保持固定点击区、原有缩进与文件夹操作。深浅主题自动继承各自的青玉或灰绿色，悬停使用陶红或绛红。</p>
+</main>
+<script>
+  const paths = {
+    closed:'<path d="M44 28h12M44 72h12"/><rect x="28" y="20" width="16" height="60" rx="8"/><rect x="56" y="20" width="16" height="60" rx="8"/>',
+    open:'<path d="M26 28h48M26 72h48"/><rect x="12" y="20" width="14" height="60" rx="7"/><rect x="74" y="20" width="14" height="60" rx="7"/><path d="M40 42h20M40 58h14"/>'
+  };
+  const icon=state=>'<svg aria-hidden="true" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">'+paths[state]+'</g></svg>';
+  document.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=icon(el.dataset.icon));
+  document.querySelectorAll('[data-sizes]').forEach(el=>el.innerHTML=[16,18,24].map(size=>'<div class="size"><span style="width:'+size+'px;height:'+size+'px">'+icon(el.dataset.sizes)+'</span>'+size+'px</div>').join(''));
+  const mode=document.querySelector('#mode');
+  mode.addEventListener('click',()=>{const dark=document.documentElement.dataset.mode!=='dark';document.documentElement.dataset.mode=dark?'dark':'light';mode.textContent=dark?'切换浅色':'切换深色';});
+</script>
+</body>
+</html>

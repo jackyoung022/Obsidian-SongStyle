@@ -4,7 +4,9 @@
 
 ## 文件
 
-- `*.svg`：最终图标，22 枚。
+- `*.svg`：原有功能图标与新增的一组双态书卷。
+- `folder-scroll-closed.svg` / `folder-scroll-open.svg`：文件夹收起/展开，两态均保留左右双卷。
+- `../folder-scroll-preview.html`：双卷开合预览，支持深浅色、实际尺寸与点击展开。
 - `variants/file-*.svg`：文件/笔记入口的 6 个设计方向。
 - `../icon-preview.html`：可直接在浏览器中查看的完整预览页。
 
@@ -14,6 +16,8 @@
 | --- | --- |
 | `collection.svg` | 新建数据库、集合类入口 |
 | `folder.svg` | 文件浏览器标签 |
+| `folder-scroll-closed.svg` | 文件夹收起：左右双卷靠拢 |
+| `folder-scroll-open.svg` | 文件夹展开：双卷舒开，露出纸面 |
 | `search.svg` | 快速切换、文件搜索 |
 | `star.svg` | 收藏标签 |
 | `bookmark.svg` | 书签标签 |
@@ -38,8 +42,7 @@
 
 ## 设计约束
 
-- 24×24 画布
-- 1.7px 主线宽
+- 原有图标使用 24×24 画布与 1.7px 主线宽；双态书卷使用 100×100 画布与 7px 线宽，缩至 24px 时约为 1.68px。
 - 圆角端点与连接
 - 至少保留 35% 留白
 - 不使用渐变、阴影和多色填充

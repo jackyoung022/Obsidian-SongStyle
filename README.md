@@ -1,14 +1,14 @@
 # 宋韵·清和
 
-> 一套以宋式审美为线索的 Obsidian 主题：暖纸、墨色、绛红、胭脂与灰绿，强调留白、细线和安静的信息层级。
+> 一套以宋式审美为线索的 Obsidian 主题。白日暖纸墨字，夜读黛蓝米白，以书卷、细线与留白承接文字。
 
-**版本：1.1.1** · 适配 Obsidian 1.6+ · 已测试 Obsidian 1.14.4（macOS）
+**版本：1.2.0** · 适配 Obsidian 1.6+ · 已测试 Obsidian 1.14.4（macOS）
 
 ![宋韵·清和浅色模式](screenshots/obsidian-light.png)
 
 ## 深浅双色
 
-主题以暖宣纸色为底，正文使用低饱和墨色，标题和交互状态使用绛红。深色模式保留同一套结构，以墨底和浅胭脂色建立层次。
+浅色模式以暖宣纸色为底，正文使用低饱和墨色，标题和交互状态使用绛红。深色模式「灯下观书」以黛蓝为底、米白为字，暖金标题与青玉链接呼应，陶红点缀交互。
 
 | 浅色模式 | 深色模式 |
 | --- | --- |
@@ -16,13 +16,15 @@
 
 ## 特点
 
-- **宋式纸面**：浅色模式使用 128px 均匀细颗粒，参考中国色网站的哑光纸面节奏，但不采用网站灰色，而是保留主题的暖纸色。
+- **宋式纸面**：深浅色模式共用 128px 均匀细颗粒，浅色为暖纸底、深色为黛蓝底；深色用明暗颗粒与柔光混合增强纹理。
 - **层次化配色**：正文、次文字、标签、标题和代码各有独立色阶，不依赖大面积高饱和色。
-- **宋版标题**：标题使用宋体，H1 以朱砂短线收束，H2 以灰绿细竖线建立秩序。
+- **宋版标题**：标题使用宋体，浅色 H1 以绛红呈现，深色 H1 使用暖金；H2 以灰绿或青玉细竖线建立秩序。
 - **阅读优化**：正文行高、段距和行宽均为长文阅读调整，最大行宽可在 Style Settings 中调整。
 - **完整 Markdown 样式**：覆盖引用、表格、任务列表、标签、脚注、Callout、代码块、嵌入内容和图片。
-- **深色模式**：独立墨色纸面与胭脂强调，不做简单反色。
+- **展开书卷**：引用与 Callout 采用左右双轴、细边纸面和主题颗粒，保留提示类型与折叠操作，适配阅读和实时预览。
+- **深色模式**：独立黛蓝纸面、暖金标题、青玉链接与陶红交互，同时适配表格、代码、属性、弹窗和图标。
 - **自定义图标**：22 枚宋式线描图标，覆盖左侧 Ribbon、侧栏标签和文件工具栏。
+- **双态书卷**：文件夹箭头替换为左右双卷，收起时靠拢，展开时舒开并露出纸面；子文件夹独立响应状态。
 - **轻量实现**：纸面颗粒由内联 CSS/SVG 生成，不依赖外部图片、字体或网络资源。
 
 ## 色板
@@ -32,11 +34,27 @@
 | 绛红 | `#8C2F2D` | 主强调、H1、当前文件 |
 | 胭脂 | `#B76F6A` | 悬停、列表标记、次强调 |
 | 暖灰 | `#8E8075` | 次级文字、图标、分隔 |
-| 灰绿 | `#B7C5B7` | 引用、标签、H2 竖线 |
+| 灰绿 | `#B7C5B7` | 标签、H2 竖线、柔和点缀 |
 | 宣纸 | `#EDE6D9` | 侧栏与纸面层 |
 | 浅纸 | `#F8F3E9` | 正文阅读区域 |
 
+### 深色 · 灯下观书
+
+| 角色 | 色值 | 用法 |
+| --- | --- | --- |
+| 黛蓝 | `#4F6072` | 边框、层次与深色底色的基准 |
+| 陶红 | `#B56A58` | 按钮与交互点缀 |
+| 暖金 | `#D9B07C` | 一级标题、粗体、行内代码 |
+| 青玉 | `#8DB8A7` | 链接、标签、三级标题 |
+| 米白 | `#F1EADF` | 正文与笔记标题 |
+
+正文纸底为 `#2B3744`，侧栏为 `#26313D`，Ribbon 为 `#212C37`。陶红小字号文字采用较亮的衍生色 `#E0A18D`，按钮文字使用深墨色。两种模式使用同一套颗粒图案、频率和种子；深色使用中性灰颗粒、增强的明暗对比和 `soft-light` 柔光混合，SVG 透明度为 `0.30`，保持黛蓝纸底。
+
+切换方式：「设置 → 外观 → 基础颜色 → 深色」。示例笔记见 [`examples/宋韵深色主题预览.md`](examples/宋韵深色主题预览.md)。
+
 ## 界面截图
+
+以下为 v1.2.0 在 Obsidian 1.14.4（macOS）中的实际界面，使用本文推荐字体；正文为仓库中的示例笔记。
 
 ### 浅色模式
 
@@ -45,6 +63,36 @@
 ### 深色模式
 
 ![深色模式完整界面](screenshots/obsidian-dark.png)
+
+### 书卷文本块与纸面细节
+
+![深浅色书卷文本块对照](screenshots/scroll-block-comparison.png)
+
+![深色纸面颗粒细节](screenshots/dark-paper-detail.png)
+
+### 文件夹双卷状态
+
+![收起与展开的双卷图标](screenshots/folder-scroll-ui.png)
+
+## 展卷文本块
+
+原有引用块与 Callout 会自动变为展开书卷，不需要额外插件或修改笔记。左右细卷轴收住纸面，浅色使用暖宣，深色使用黛笺；提示类型通过卷首图标和题签细线区分。
+
+| 浅色书卷 | 深色书卷 |
+| --- | --- |
+| ![浅色书卷](screenshots/scroll-block-light.png) | ![深色书卷](screenshots/scroll-block-dark.png) |
+
+```markdown
+> 山静似太古，日长如小年。
+
+> [!tip] 卷首小记
+> 将值得停留的文字，放进一幅安静的书卷。
+
+> [!note]- 收卷藏字 · 点击展开
+> 原有折叠操作继续可用。
+```
+
+示例笔记：[`examples/宋韵书卷展示.md`](examples/宋韵书卷展示.md)。阅读模式显示完整书卷，实时预览中的连续引用行共用双轴，便于直接编辑。
 
 ## 宋韵图标
 
@@ -72,6 +120,8 @@
 ![图标界面预览](screenshots/icon-ui.png)
 
 图标展示页源文件：[`宋韵·清和/icon-preview.html`](宋韵·清和/icon-preview.html)
+
+文件夹双卷开合预览：[`宋韵·清和/folder-scroll-preview.html`](宋韵·清和/folder-scroll-preview.html)。启用「宋韵图标」片段后自动生效，保留原生点击与文件树缩进；关闭片段即可恢复箭头。
 
 [查看图标展示页完整长图](screenshots/icon-preview-full.png)
 
@@ -108,7 +158,7 @@ cp Obsidian-SongStyle/snippets/宋韵图标.css "$VAULT/.obsidian/snippets/"
 
 ### 方式三：发布包
 
-下载仓库中的 [`dist/Obsidian-SongStyle-v1.1.1.zip`](dist/Obsidian-SongStyle-v1.1.1.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
+下载仓库中的 [`dist/Obsidian-SongStyle-v1.2.0.zip`](dist/Obsidian-SongStyle-v1.2.0.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
 
 - 将 `Songyun-Qinghe/` 复制到 `.obsidian/themes/`。
 - 将 `songyun-icons.css` 复制到 `.obsidian/snippets/`。
@@ -116,6 +166,29 @@ cp Obsidian-SongStyle/snippets/宋韵图标.css "$VAULT/.obsidian/snippets/"
 Obsidian 中显示的主题名仍为「宋韵·清和」。
 
 ## 设置
+
+### 推荐字体
+
+为接近 README 截图，推荐以下组合。字体需先安装到操作系统，再在「设置 → 外观 → 字体」中选择；主题包不包含字体文件，也不会联网加载字体。
+
+| 使用位置 | 推荐字体 | Obsidian 中的名称 | 设计用途与下载 |
+| --- | --- | --- | --- |
+| 正文 | 霞鹜文楷 | `LXGW WenKai` | 笔画舒展，用于札记和长文。[官方项目与下载](https://github.com/lxgw/LxgwWenKai) |
+| 界面 | 阿里巴巴普惠体 2.0 | `Alibaba PuHuiTi 2.0` | 用于文件列表、设置和工具栏，让小字号信息保持清楚。[官方字体站](https://www.alibabafonts.com/) |
+| 代码 | JetBrains Mono | `JetBrains Mono` | 用于代码块和等宽文本，代码中的中文由后续字体回退显示。[官方下载](https://www.jetbrains.com/lp/mono/) |
+| 标题、卷首题签 | 宋体 / 思源宋体 | `Songti SC` / `Source Han Serif SC` | 主题优先使用 macOS 宋体；其他平台可安装[思源宋体](https://github.com/adobe-fonts/source-han-serif)。标题宋体由主题控制。 |
+
+截图使用的设置：
+
+```text
+界面字体：Alibaba PuHuiTi 2.0
+正文字体：LXGW WenKai
+等宽字体：JetBrains Mono
+字体大小：16px
+正文行宽：780px（主题默认值）
+```
+
+安装后如字体列表尚未刷新，重新打开 Obsidian 再选择。不同版本字体可能显示中文名称，选择对应的字体家族即可。未安装推荐字体时，主题会回退到系统字体；标题的回退顺序见主题 CSS 的 `--song-serif`。
 
 ### Style Settings（可选）
 
@@ -145,7 +218,7 @@ Obsidian 中显示的主题名仍为「宋韵·清和」。
 --song-reading-width: 780px;
 ```
 
-纸面颗粒由 `--song-paper-grain-fine` 控制，当前为 `128px` 平铺。若想更明显，可以增加该变量 SVG 中的 `opacity` 值；若想更轻，则降低该值。
+纸面颗粒由 `--song-paper-grain-fine` 控制，当前为 `128px` 平铺。若想更明显，可以增加该变量 SVG 中的 `opacity` 值；若想更轻，则降低该值。浅色变量位于 `body`，深色覆盖位于 `body.theme-dark`，两者分别调整。
 
 ## 文件结构
 
@@ -156,6 +229,7 @@ Obsidian-SongStyle/
 │   ├── manifest.json
 │   ├── theme.css
 │   ├── icon-preview.html
+│   ├── folder-scroll-preview.html
 │   ├── icons/
 │   │   ├── *.svg
 │   │   └── variants/
@@ -166,15 +240,22 @@ Obsidian-SongStyle/
 ├── screenshots/
 │   ├── obsidian-light.png
 │   ├── obsidian-dark.png
+│   ├── scroll-block-light.png
+│   ├── scroll-block-dark.png
+│   ├── scroll-block-comparison.png
+│   ├── dark-paper-detail.png
+│   ├── folder-scroll-ui.png
 │   ├── icon-hero.png
 │   ├── icon-directions.png
 │   ├── icon-set.png
 │   ├── icon-preview-full.png
 │   └── icon-ui.png
 ├── examples/
-│   └── 宋韵主题预览.md
+│   ├── 宋韵主题预览.md
+│   ├── 宋韵深色主题预览.md
+│   └── 宋韵书卷展示.md
 └── dist/
-    └── Obsidian-SongStyle-v1.1.1.zip
+    └── Obsidian-SongStyle-v1.2.0.zip
 ```
 
 ## 兼容性
@@ -193,6 +274,17 @@ Obsidian-SongStyle/
 - 预览截图使用仓库内的示例笔记，不包含个人笔记内容。
 
 ## 更新记录
+
+### 1.2.0
+
+- 新增「灯下观书」深色配色，以黛蓝、陶红、暖金、青玉与米白建立层次。
+- 深浅模式使用相同的细颗粒纹样，深色以明暗颗粒和柔光混合增强纹理。
+- 修复设置下拉框的箭头重复平铺，保留原生图标尺寸、位置和交互。
+- 文件夹新增双卷开合图标，收起与展开均保留左右双卷。
+- 引用和提示块改为展开书卷，增加深浅色纸面、卷首题签和左右卷轴；保留原生编辑与折叠。
+- 补齐深色 RGB 变量，修正标题栏、状态栏、表格和属性等区域的浅色残留。
+- 调整深色按钮文字、链接、标签、代码和 Callout，增加深色示例笔记与截图。
+- 补充推荐字体、字体安装与外观设置说明，更新完整界面及书卷细节截图。
 
 ### 1.1.1
 

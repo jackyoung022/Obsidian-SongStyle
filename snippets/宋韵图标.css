@@ -301,3 +301,51 @@ body {
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
   --song-icon-current: var(--song-icon-settings);
 }
+
+/* 文件夹双态书卷：只替换文件树原箭头，保留原点击区和缩进。 */
+body {
+  --song-icon-folder-scroll-closed: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgPHBhdGggZD0iTTQ0IDI4aDEyTTQ0IDcyaDEyIi8+CiAgICA8cmVjdCB4PSIyOCIgeT0iMjAiIHdpZHRoPSIxNiIgaGVpZ2h0PSI2MCIgcng9IjgiLz4KICAgIDxyZWN0IHg9IjU2IiB5PSIyMCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjYwIiByeD0iOCIvPgogIDwvZz4KPC9zdmc+Cg==");
+  --song-icon-folder-scroll-open: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgPHBhdGggZD0iTTI2IDI4aDQ4TTI2IDcyaDQ4Ii8+CiAgICA8cmVjdCB4PSIxMiIgeT0iMjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSI2MCIgcng9IjciLz4KICAgIDxyZWN0IHg9Ijc0IiB5PSIyMCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjYwIiByeD0iNyIvPgogICAgPHBhdGggZD0iTTQwIDQyaDIwTTQwIDU4aDE0Ii8+CiAgPC9nPgo8L3N2Zz4K");
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon) {
+  --song-folder-scroll: var(--song-icon-folder-scroll-open);
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  flex: 0 0 20px;
+  transform: none;
+  color: var(--song-celadon-deep, var(--nav-collapse-icon-color));
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder.is-collapsed > .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon),
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title.is-collapsed > :is(.nav-folder-collapse-indicator, .collapse-icon) {
+  --song-folder-scroll: var(--song-icon-folder-scroll-closed);
+}
+
+/* visibility 保留原 SVG 的占位，避免按钮尺寸随着图标变化而挤压。 */
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon) > svg {
+  visibility: hidden;
+  transform: none;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  background-color: currentColor;
+  -webkit-mask: var(--song-folder-scroll) center / contain no-repeat;
+  mask: var(--song-folder-scroll) center / contain no-repeat;
+  pointer-events: none;
+}
+
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title:hover > :is(.nav-folder-collapse-indicator, .collapse-icon) {
+  color: var(--song-accent, var(--text-accent));
+}
