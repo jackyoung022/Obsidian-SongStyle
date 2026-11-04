@@ -4,7 +4,7 @@
 
 ## 文件
 
-- `*-*.svg`：最终图标，16 枚。
+- `*.svg`：最终图标，22 枚。
 - `variants/file-*.svg`：文件/笔记入口的 6 个设计方向。
 - `../icon-preview.html`：可直接在浏览器中查看的完整预览页。
 
@@ -13,7 +13,10 @@
 | 图标 | 替换入口 |
 | --- | --- |
 | `collection.svg` | 新建数据库、集合类入口 |
+| `folder.svg` | 文件浏览器标签 |
 | `search.svg` | 快速切换、文件搜索 |
+| `star.svg` | 收藏标签 |
+| `bookmark.svg` | 书签标签 |
 | `graph.svg` | 关系图谱 |
 | `canvas.svg` | 白板 |
 | `daily.svg` | 日记 |
@@ -26,6 +29,9 @@
 | `draw.svg` | Excalidraw |
 | `compose.svg` | 新建笔记 |
 | `folder-plus.svg` | 新建文件夹 |
+| `sort.svg` | 文件排序 |
+| `reveal.svg` | 定位当前文件 |
+| `collapse.svg` | 展开/折叠全部文件夹 |
 | `settings.svg` | 设置 |
 
 替换规则在 `.obsidian/snippets/宋韵图标.css`。停用这个 CSS 片段即可恢复 Obsidian 原生图标。

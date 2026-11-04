@@ -5,7 +5,10 @@
 
 body {
   --song-icon-collection: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxyZWN0IHg9IjQuNyIgeT0iNC40IiB3aWR0aD0iMTQuNiIgaGVpZ2h0PSI0IiByeD0iMS4xIi8+CiAgICA8cmVjdCB4PSIzLjYiIHk9IjEwIiB3aWR0aD0iMTYuOCIgaGVpZ2h0PSI0IiByeD0iMS4xIi8+CiAgICA8cmVjdCB4PSI0LjciIHk9IjE1LjYiIHdpZHRoPSIxNC42IiBoZWlnaHQ9IjQiIHJ4PSIxLjEiLz4KICAgIDxwYXRoIGQ9Ik03LjQgNi40aDUuM003LjQgMTJoNy42TTcuNCAxNy42aDQuNyIgb3BhY2l0eT0iLjU4Ii8+CiAgPC9nPgo8L3N2Zz4K");
+  --song-icon-folder: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0zLjggNy4xaDUuOGwxLjggMi4xaDguOHY5LjZIMy44WiIvPgogICAgPHBhdGggZD0iTTYuMSAxMS45aDExLjgiIG9wYWNpdHk9Ii40NSIvPgogIDwvZz4KPC9zdmc+Cg==");
   --song-icon-search: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxjaXJjbGUgY3g9IjEwLjIiIGN5PSIxMC40IiByPSI1LjQiLz4KICAgIDxwYXRoIGQ9Ik0xNC4yIDE0LjVsNC43IDQuNyIvPgogICAgPHBhdGggZD0iTTcuMSA5LjZjMS4xLTEuMSAyLjgtMS40IDQuMi0uNiIgb3BhY2l0eT0iLjU4Ii8+CiAgPC9nPgo8L3N2Zz4K");
+  --song-icon-star: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPHBhdGggZD0iTTEyIDQuMWwyLjMgNC44IDUuMi44LTMuOCAzLjcuOSA1LjItNC42LTIuNC00LjYgMi40LjktNS4yLTMuOC0zLjcgNS4yLS44TDEyIDQuMVoiCiAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+  --song-icon-bookmark: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik03LjIgNC42aDkuNnYxNC44TDEyIDE2LjNsLTQuOCAzLjFaIi8+CiAgICA8cGF0aCBkPSJNOS40IDguMmg1LjIiIG9wYWNpdHk9Ii40NSIvPgogIDwvZz4KPC9zdmc+Cg==");
   --song-icon-graph: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik02LjUgMTUuNmMxLjUtMi43IDMuMi01LjQgNC44LTcuNE0xMy4zIDcuNGMxLjkgMiAzLjggNC4zIDQuOCA2LjMiLz4KICAgIDxwYXRoIGQ9Ik03LjIgMTcuNWMzLjUuNSA3IC4zIDkuOC0uOSIgb3BhY2l0eT0iLjU1Ii8+CiAgICA8Y2lyY2xlIGN4PSI1LjciIGN5PSIxNy40IiByPSIxLjYiIGZpbGw9IiMwMDAiIHN0cm9rZT0ibm9uZSIvPgogICAgPGNpcmNsZSBjeD0iMTIuMiIgY3k9IjYuMiIgcj0iMS44IiBmaWxsPSIjMDAwIiBzdHJva2U9Im5vbmUiLz4KICAgIDxjaXJjbGUgY3g9IjE4LjUiIGN5PSIxNSIgcj0iMS40IiBmaWxsPSIjMDAwIiBzdHJva2U9Im5vbmUiLz4KICA8L2c+Cjwvc3ZnPgo=");
   --song-icon-canvas: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik01LjQgNWgxMy4ydjE0SDUuNFoiLz4KICAgIDxwYXRoIGQ9Ik0zLjIgNy40YzEuMiAwIDIgLjggMiAyLjF2NWMwIDEuMy0uOCAyLjEtMiAyLjFNMjAuOCA3LjRjLTEuMiAwLTIgLjgtMiAyLjF2NWMwIDEuMy44IDIuMSAyIDIuMSIvPgogICAgPHBhdGggZD0iTTguMyA4LjloNC40TTguMyAxMS44aDcuNE04LjMgMTQuN2g1LjQiIG9wYWNpdHk9Ii41NSIvPgogIDwvZz4KPC9zdmc+Cg==");
   --song-icon-daily: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iNy4yIiByPSIzLjMiLz4KICAgIDxwYXRoIGQ9Ik00LjMgMTYuNGMyLjMtMi4yIDQuMi0xLjQgNi4xLjUgMS44LTIuNCAzLjgtMyA1LjctMS4zIDEuMyAxLjEgMi40IDEuNSA0IDEuNiIvPgogICAgPHBhdGggZD0iTTQuMiAxOS4yaDE1LjYiIG9wYWNpdHk9Ii41NSIvPgogIDwvZz4KPC9zdmc+Cg==");
@@ -18,6 +21,9 @@ body {
   --song-icon-draw: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik00LjggMTguOWMyLjguMyA1LjEtLjYgNy0yLjQgMi4xLTIuMSAzLjUtNS4xIDUuMy03LjkiLz4KICAgIDxwYXRoIGQ9Ik0xNiA0LjVjMS4yLTEgMi43LS44IDMuMy40LjYgMS4yLS4xIDIuNC0xLjEgMy4yLS43LjYtMS40IDEtMiAxLjQtMS4xLS41LTEuNy0xLjEtMS45LTIuMi4zLS45LjktMS45IDEuNy0yLjhaIi8+CiAgICA8cGF0aCBkPSJNNi4yIDE3LjFjMS4yLS4yIDIuMS0uMSAzIC4zIiBvcGFjaXR5PSIuNTUiLz4KICA8L2c+Cjwvc3ZnPgo=");
   --song-icon-compose: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik00LjggNC45aDkuNnYxNC4ySDQuOFoiLz4KICAgIDxwYXRoIGQ9Ik03LjMgOC4yaDQuN003LjMgMTEuNGgzLjciIG9wYWNpdHk9Ii41NSIvPgogICAgPHBhdGggZD0iTTE0IDE1LjZjMi42LS43IDQuMy0yLjcgNC44LTUuNC4zLTEuNyAxLTIuNyAyLTMuNCIvPgogICAgPHBhdGggZD0iTTIwLjIgNC4yYzEuMi4yIDEuOCAxLjIgMS41IDIuMy0uMyAxLTEuMiAxLjctMi4yIDIuMSIgb3BhY2l0eT0iLjciLz4KICA8L2c+Cjwvc3ZnPgo=");
   --song-icon-folder-plus: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0zLjggNy4xaDUuOGwxLjggMi4xaDguOHY5LjZIMy44WiIvPgogICAgPHBhdGggZD0iTTEyIDExLjV2NU05LjUgMTRoNSIvPgogIDwvZz4KPC9zdmc+Cg==");
+  --song-icon-sort: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik00LjggNi43aDkuNk00LjggMTEuN2g3LjJNNC44IDE2LjdoNC44Ii8+CiAgICA8cGF0aCBkPSJNMTcuNCAxOFY3LjRNMTQuOCA5LjlsMi42LTIuNyAyLjYgMi43Ii8+CiAgPC9nPgo8L3N2Zz4K");
+  --song-icon-reveal: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik01LjQgNC43aDhsNC4zIDQuM3YxMC4zSDUuNFoiLz4KICAgIDxwYXRoIGQ9Ik0xMy4yIDQuOXY0LjNoNC4xIiBvcGFjaXR5PSIuNTUiLz4KICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTQuMiIgcj0iMi4yIi8+CiAgICA8cGF0aCBkPSJNMTIgMTAuNXYxLjFNMTIgMTYuOHYxLjFNOC4zIDE0LjJoMS4xTTE0LjYgMTQuMmgxLjEiIG9wYWNpdHk9Ii42OCIvPgogIDwvZz4KPC9zdmc+Cg==");
+  --song-icon-collapse: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik01LjIgNWgxMy42TTUuMiAxOWgxMy42Ii8+CiAgICA8cGF0aCBkPSJNOS40IDguNWwyLjYgMi42IDIuNi0yLjZNOS40IDE1LjVsMi42LTIuNiAyLjYgMi42Ii8+CiAgPC9nPgo8L3N2Zz4K");
   --song-icon-settings: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjYuNyIvPgogICAgPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMi4zIi8+CiAgICA8cGF0aCBkPSJNMTIgMy43djEuOE0xMiAxOC41djEuOE0zLjcgMTJoMS44TTE4LjUgMTJoMS44TTYuMSA2LjFsMS4zIDEuM00xNi42IDE2LjZsMS4zIDEuM00xNy45IDYuMWwtMS4zIDEuM003LjQgMTYuNmwtMS4zIDEuMyIvPgogIDwvZz4KPC9zdmc+Cg==");
 }
 
@@ -30,33 +36,89 @@ body {
   margin-block: 3px;
 }
 
+.nav-buttons-container .clickable-icon {
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  margin-inline: 4px;
+}
+
+.workspace-tab-header[data-type="file-explorer"],
+.workspace-tab-header[data-type="search"],
+.workspace-tab-header[data-type="starred"],
+.workspace-tab-header[data-type="bookmarks"] {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  margin-inline: 3px;
+}
+
+.workspace-tab-header[data-type="file-explorer"] .workspace-tab-header-inner-icon,
+.workspace-tab-header[data-type="search"] .workspace-tab-header-inner-icon,
+.workspace-tab-header[data-type="starred"] .workspace-tab-header-inner-icon,
+.workspace-tab-header[data-type="bookmarks"] .workspace-tab-header-inner-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  background-color: var(--icon-color, var(--text-muted));
+  -webkit-mask: var(--song-icon-current) center / contain no-repeat;
+  mask: var(--song-icon-current) center / contain no-repeat;
+  opacity: .8;
+}
+
+.workspace-tab-header[data-type="file-explorer"].is-active .workspace-tab-header-inner-icon,
+.workspace-tab-header[data-type="search"].is-active .workspace-tab-header-inner-icon,
+.workspace-tab-header[data-type="starred"].is-active .workspace-tab-header-inner-icon,
+.workspace-tab-header[data-type="bookmarks"].is-active .workspace-tab-header-inner-icon {
+  background-color: var(--text-accent);
+  opacity: 1;
+}
+
 /* 隐藏原图标，并在同一按钮位置绘制宋韵图标。 */
-.side-dock-ribbon-action:has(svg.lucide-layout-list) > svg,
-.side-dock-ribbon-action:has(svg.lucide-file-search) > svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-search) > svg,
-.side-dock-ribbon-action:has(svg.lucide-git-fork) > svg,
-.side-dock-ribbon-action:has(svg.lucide-layout-dashboard) > svg,
-.side-dock-ribbon-action:has(svg.lucide-calendar) > svg,
-.side-dock-ribbon-action:has(svg.lucide-files) > svg,
-.side-dock-ribbon-action:has(svg.templater-icon) > svg,
-.side-dock-ribbon-action:has(svg.lucide-terminal) > svg,
-.side-dock-ribbon-action:has(svg.lucide-layout) > svg,
-.side-dock-ribbon-action:has(svg.spreadsheet) > svg,
-.side-dock-ribbon-action:has(svg.lucide-git-pull-request) > svg,
-.side-dock-ribbon-action:has(svg.lucide-book-open) > svg,
-.side-dock-ribbon-action:has(svg.excalidraw-icon) > svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-edit) > svg,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit) > svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus) > svg,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus) > svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-settings) > svg,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) > svg {
+.side-dock-ribbon-action:has(svg.lucide-layout-list) svg,
+.workspace-tab-header[data-type="file-explorer"] svg,
+.side-dock-ribbon-action:has(svg.lucide-file-search) svg,
+.workspace-tab-header[data-type="search"] svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-search) svg,
+.workspace-tab-header[data-type="starred"] svg,
+.workspace-tab-header[data-type="bookmarks"] svg,
+.side-dock-ribbon-action:has(svg.lucide-git-fork) svg,
+.side-dock-ribbon-action:has(svg.lucide-layout-dashboard) svg,
+.side-dock-ribbon-action:has(svg.lucide-calendar) svg,
+.side-dock-ribbon-action:has(svg.lucide-files) svg,
+.side-dock-ribbon-action:has(svg.templater-icon) svg,
+.side-dock-ribbon-action:has(svg.lucide-terminal) svg,
+.side-dock-ribbon-action:has(svg.lucide-layout) svg,
+.side-dock-ribbon-action:has(svg.spreadsheet) svg,
+.side-dock-ribbon-action:has(svg.lucide-git-pull-request) svg,
+.side-dock-ribbon-action:has(svg.lucide-book-open) svg,
+.side-dock-ribbon-action:has(svg.excalidraw-icon) svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-edit) svg,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit) svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus) svg,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus) svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc) svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical) svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up) svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down) svg,
+.nav-buttons-container .clickable-icon:has(svg.lucide-settings) svg,
+.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) svg {
   display: none !important;
 }
 
 .side-dock-ribbon-action:has(svg.lucide-layout-list),
+.workspace-tab-header[data-type="file-explorer"],
 .side-dock-ribbon-action:has(svg.lucide-file-search),
+.workspace-tab-header[data-type="search"],
 .nav-buttons-container .clickable-icon:has(svg.lucide-search),
+.workspace-tab-header[data-type="starred"],
+.workspace-tab-header[data-type="bookmarks"],
 .side-dock-ribbon-action:has(svg.lucide-git-fork),
 .side-dock-ribbon-action:has(svg.lucide-layout-dashboard),
 .side-dock-ribbon-action:has(svg.lucide-calendar),
@@ -72,14 +134,22 @@ body {
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit),
 .nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus),
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus),
+.nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc),
+.nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical),
+.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up),
+.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down),
 .nav-buttons-container .clickable-icon:has(svg.lucide-settings),
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
   position: relative;
 }
 
 .side-dock-ribbon-action:has(svg.lucide-layout-list)::after,
+.workspace-tab-header[data-type="file-explorer"]::after,
 .side-dock-ribbon-action:has(svg.lucide-file-search)::after,
+.workspace-tab-header[data-type="search"]::after,
 .nav-buttons-container .clickable-icon:has(svg.lucide-search)::after,
+.workspace-tab-header[data-type="starred"]::after,
+.workspace-tab-header[data-type="bookmarks"]::after,
 .side-dock-ribbon-action:has(svg.lucide-git-fork)::after,
 .side-dock-ribbon-action:has(svg.lucide-layout-dashboard)::after,
 .side-dock-ribbon-action:has(svg.lucide-calendar)::after,
@@ -95,6 +165,10 @@ body {
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit)::after,
 .nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus)::after,
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down)::after,
 .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
   content: "";
@@ -108,6 +182,7 @@ body {
   mask: var(--song-icon-current) center / contain no-repeat;
   pointer-events: none;
   opacity: .92;
+  z-index: 2;
 }
 
 .nav-buttons-container .clickable-icon:has(svg.lucide-search)::after,
@@ -115,6 +190,10 @@ body {
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit)::after,
 .nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus)::after,
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up)::after,
+.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down)::after,
 .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
   width: 16px;
@@ -122,14 +201,36 @@ body {
   opacity: .82;
 }
 
+.workspace-tab-header[data-type="file-explorer"]::after,
+.workspace-tab-header[data-type="search"]::after,
+.workspace-tab-header[data-type="starred"]::after,
+.workspace-tab-header[data-type="bookmarks"]::after {
+  width: 18px;
+  height: 18px;
+  opacity: .78;
+}
+
 /* 指定每个入口使用的图标。 */
 .side-dock-ribbon-action:has(svg.lucide-layout-list) {
   --song-icon-current: var(--song-icon-collection);
 }
 
+.workspace-tab-header[data-type="file-explorer"] {
+  --song-icon-current: var(--song-icon-folder);
+}
+
 .side-dock-ribbon-action:has(svg.lucide-file-search),
+.workspace-tab-header[data-type="search"],
 .nav-buttons-container .clickable-icon:has(svg.lucide-search) {
   --song-icon-current: var(--song-icon-search);
+}
+
+.workspace-tab-header[data-type="starred"] {
+  --song-icon-current: var(--song-icon-star);
+}
+
+.workspace-tab-header[data-type="bookmarks"] {
+  --song-icon-current: var(--song-icon-bookmark);
 }
 
 .side-dock-ribbon-action:has(svg.lucide-git-fork) {
@@ -181,6 +282,19 @@ body {
 .nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus),
 .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus) {
   --song-icon-current: var(--song-icon-folder-plus);
+}
+
+.nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc) {
+  --song-icon-current: var(--song-icon-sort);
+}
+
+.nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical) {
+  --song-icon-current: var(--song-icon-reveal);
+}
+
+.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up),
+.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down) {
+  --song-icon-current: var(--song-icon-collapse);
 }
 
 .nav-buttons-container .clickable-icon:has(svg.lucide-settings),

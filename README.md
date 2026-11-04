@@ -2,7 +2,7 @@
 
 > 一套以宋式审美为线索的 Obsidian 主题：暖纸、墨色、绛红、胭脂与灰绿，强调留白、细线和安静的信息层级。
 
-**版本：1.1.0** · 适配 Obsidian 1.6+ · 已测试 Obsidian 1.14.4（macOS）
+**版本：1.1.1** · 适配 Obsidian 1.6+ · 已测试 Obsidian 1.14.4（macOS）
 
 ![宋韵·清和浅色模式](screenshots/obsidian-light.png)
 
@@ -22,7 +22,7 @@
 - **阅读优化**：正文行高、段距和行宽均为长文阅读调整，最大行宽可在 Style Settings 中调整。
 - **完整 Markdown 样式**：覆盖引用、表格、任务列表、标签、脚注、Callout、代码块、嵌入内容和图片。
 - **深色模式**：独立墨色纸面与胭脂强调，不做简单反色。
-- **自定义图标**：16 枚宋式线描图标，替换 Obsidian 高频工具栏入口。
+- **自定义图标**：22 枚宋式线描图标，覆盖左侧 Ribbon、侧栏标签和文件工具栏。
 - **轻量实现**：纸面颗粒由内联 CSS/SVG 生成，不依赖外部图片、字体或网络资源。
 
 ## 色板
@@ -65,7 +65,7 @@
 
 ![默认图标组](screenshots/icon-set.png)
 
-覆盖入口：收藏/数据库、文件、搜索、关系图、白板、日记、模板、命令面板、工作区、表格、Git、阅读器、绘图、新建笔记、新建文件夹和设置。
+覆盖入口：收藏/数据库、文件、搜索、关系图、白板、日记、模板、命令面板、工作区、表格、Git、阅读器、绘图、新建笔记、新建文件夹、设置、文件目录、收藏、书签、排序、定位当前文件和展开/折叠全部。
 
 ### 图标在界面中的效果
 
@@ -108,7 +108,7 @@ cp Obsidian-SongStyle/snippets/宋韵图标.css "$VAULT/.obsidian/snippets/"
 
 ### 方式三：发布包
 
-下载仓库中的 [`dist/Obsidian-SongStyle-v1.1.0.zip`](dist/Obsidian-SongStyle-v1.1.0.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
+下载仓库中的 [`dist/Obsidian-SongStyle-v1.1.1.zip`](dist/Obsidian-SongStyle-v1.1.1.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
 
 - 将 `Songyun-Qinghe/` 复制到 `.obsidian/themes/`。
 - 将 `songyun-icons.css` 复制到 `.obsidian/snippets/`。
@@ -174,7 +174,7 @@ Obsidian-SongStyle/
 ├── examples/
 │   └── 宋韵主题预览.md
 └── dist/
-    └── Obsidian-SongStyle-v1.1.0.zip
+    └── Obsidian-SongStyle-v1.1.1.zip
 ```
 
 ## 兼容性
@@ -193,6 +193,12 @@ Obsidian-SongStyle/
 - 预览截图使用仓库内的示例笔记，不包含个人笔记内容。
 
 ## 更新记录
+
+### 1.1.1
+
+- 补齐侧栏标签与文件工具栏图标。
+- 恢复侧栏标签及按钮的固定尺寸和间距。
+- 图标总数扩展至 22 枚并更新预览页。
 
 ### 1.1.0
 
