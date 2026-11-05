@@ -3,7 +3,7 @@
    图标源文件：.obsidian/themes/宋韵·清和/icons/
 */
 
-body {
+body:not(.song-original-icons) {
   --song-icon-collection: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxyZWN0IHg9IjQuNyIgeT0iNC40IiB3aWR0aD0iMTQuNiIgaGVpZ2h0PSI0IiByeD0iMS4xIi8+CiAgICA8cmVjdCB4PSIzLjYiIHk9IjEwIiB3aWR0aD0iMTYuOCIgaGVpZ2h0PSI0IiByeD0iMS4xIi8+CiAgICA8cmVjdCB4PSI0LjciIHk9IjE1LjYiIHdpZHRoPSIxNC42IiBoZWlnaHQ9IjQiIHJ4PSIxLjEiLz4KICAgIDxwYXRoIGQ9Ik03LjQgNi40aDUuM003LjQgMTJoNy42TTcuNCAxNy42aDQuNyIgb3BhY2l0eT0iLjU4Ii8+CiAgPC9nPgo8L3N2Zz4K");
   --song-icon-folder: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0zLjggNy4xaDUuOGwxLjggMi4xaDguOHY5LjZIMy44WiIvPgogICAgPHBhdGggZD0iTTYuMSAxMS45aDExLjgiIG9wYWNpdHk9Ii40NSIvPgogIDwvZz4KPC9zdmc+Cg==");
   --song-icon-search: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxjaXJjbGUgY3g9IjEwLjIiIGN5PSIxMC40IiByPSI1LjQiLz4KICAgIDxwYXRoIGQ9Ik0xNC4yIDE0LjVsNC43IDQuNyIvPgogICAgPHBhdGggZD0iTTcuMSA5LjZjMS4xLTEuMSAyLjgtMS40IDQuMi0uNiIgb3BhY2l0eT0iLjU4Ii8+CiAgPC9nPgo8L3N2Zz4K");
@@ -28,7 +28,7 @@ body {
 }
 
 /* 隐藏 SVG 后，手动恢复 Ribbon 按钮的点击区与行距。 */
-.side-dock-ribbon-action {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action {
   box-sizing: border-box;
   width: 34px;
   height: 34px;
@@ -36,7 +36,7 @@ body {
   margin-block: 3px;
 }
 
-.nav-buttons-container .clickable-icon {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon {
   box-sizing: border-box;
   width: 28px;
   height: 28px;
@@ -45,10 +45,10 @@ body {
   margin-inline: 4px;
 }
 
-.workspace-tab-header[data-type="file-explorer"],
-.workspace-tab-header[data-type="search"],
-.workspace-tab-header[data-type="starred"],
-.workspace-tab-header[data-type="bookmarks"] {
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="file-explorer"],
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="search"],
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="starred"],
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="bookmarks"] {
   box-sizing: border-box;
   width: 30px;
   height: 30px;
@@ -57,10 +57,10 @@ body {
   margin-inline: 3px;
 }
 
-.workspace-tab-header[data-type="file-explorer"] .workspace-tab-header-inner-icon,
-.workspace-tab-header[data-type="search"] .workspace-tab-header-inner-icon,
-.workspace-tab-header[data-type="starred"] .workspace-tab-header-inner-icon,
-.workspace-tab-header[data-type="bookmarks"] .workspace-tab-header-inner-icon {
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="file-explorer"] .workspace-tab-header-inner-icon,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="search"] .workspace-tab-header-inner-icon,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="starred"] .workspace-tab-header-inner-icon,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="bookmarks"] .workspace-tab-header-inner-icon {
   display: block;
   width: 18px;
   height: 18px;
@@ -72,105 +72,105 @@ body {
   opacity: .8;
 }
 
-.workspace-tab-header[data-type="file-explorer"].is-active .workspace-tab-header-inner-icon,
-.workspace-tab-header[data-type="search"].is-active .workspace-tab-header-inner-icon,
-.workspace-tab-header[data-type="starred"].is-active .workspace-tab-header-inner-icon,
-.workspace-tab-header[data-type="bookmarks"].is-active .workspace-tab-header-inner-icon {
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="file-explorer"].is-active .workspace-tab-header-inner-icon,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="search"].is-active .workspace-tab-header-inner-icon,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="starred"].is-active .workspace-tab-header-inner-icon,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="bookmarks"].is-active .workspace-tab-header-inner-icon {
   background-color: var(--text-accent);
   opacity: 1;
 }
 
 /* 隐藏原图标，并在同一按钮位置绘制宋韵图标。 */
-.side-dock-ribbon-action:has(svg.lucide-layout-list) svg,
-.workspace-tab-header[data-type="file-explorer"] svg,
-.side-dock-ribbon-action:has(svg.lucide-file-search) svg,
-.workspace-tab-header[data-type="search"] svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-search) svg,
-.workspace-tab-header[data-type="starred"] svg,
-.workspace-tab-header[data-type="bookmarks"] svg,
-.side-dock-ribbon-action:has(svg.lucide-git-fork) svg,
-.side-dock-ribbon-action:has(svg.lucide-layout-dashboard) svg,
-.side-dock-ribbon-action:has(svg.lucide-calendar) svg,
-.side-dock-ribbon-action:has(svg.lucide-files) svg,
-.side-dock-ribbon-action:has(svg.templater-icon) svg,
-.side-dock-ribbon-action:has(svg.lucide-terminal) svg,
-.side-dock-ribbon-action:has(svg.lucide-layout) svg,
-.side-dock-ribbon-action:has(svg.spreadsheet) svg,
-.side-dock-ribbon-action:has(svg.lucide-git-pull-request) svg,
-.side-dock-ribbon-action:has(svg.lucide-book-open) svg,
-.side-dock-ribbon-action:has(svg.excalidraw-icon) svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-edit) svg,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit) svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus) svg,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus) svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc) svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical) svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up) svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down) svg,
-.nav-buttons-container .clickable-icon:has(svg.lucide-settings) svg,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) svg {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout-list) svg,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="file-explorer"] svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-file-search) svg,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="search"] svg,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-search) svg,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="starred"] svg,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="bookmarks"] svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-git-fork) svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout-dashboard) svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-calendar) svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-files) svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.templater-icon) svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-terminal) svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout) svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.spreadsheet) svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-git-pull-request) svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-book-open) svg,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.excalidraw-icon) svg,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-edit) svg,
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit) svg,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus) svg,
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus) svg,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc) svg,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical) svg,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up) svg,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down) svg,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings) svg,
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) svg {
   display: none !important;
 }
 
-.side-dock-ribbon-action:has(svg.lucide-layout-list),
-.workspace-tab-header[data-type="file-explorer"],
-.side-dock-ribbon-action:has(svg.lucide-file-search),
-.workspace-tab-header[data-type="search"],
-.nav-buttons-container .clickable-icon:has(svg.lucide-search),
-.workspace-tab-header[data-type="starred"],
-.workspace-tab-header[data-type="bookmarks"],
-.side-dock-ribbon-action:has(svg.lucide-git-fork),
-.side-dock-ribbon-action:has(svg.lucide-layout-dashboard),
-.side-dock-ribbon-action:has(svg.lucide-calendar),
-.side-dock-ribbon-action:has(svg.lucide-files),
-.side-dock-ribbon-action:has(svg.templater-icon),
-.side-dock-ribbon-action:has(svg.lucide-terminal),
-.side-dock-ribbon-action:has(svg.lucide-layout),
-.side-dock-ribbon-action:has(svg.spreadsheet),
-.side-dock-ribbon-action:has(svg.lucide-git-pull-request),
-.side-dock-ribbon-action:has(svg.lucide-book-open),
-.side-dock-ribbon-action:has(svg.excalidraw-icon),
-.nav-buttons-container .clickable-icon:has(svg.lucide-edit),
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit),
-.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus),
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus),
-.nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc),
-.nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical),
-.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up),
-.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down),
-.nav-buttons-container .clickable-icon:has(svg.lucide-settings),
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout-list),
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="file-explorer"],
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-file-search),
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="search"],
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-search),
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="starred"],
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="bookmarks"],
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-git-fork),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout-dashboard),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-calendar),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-files),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.templater-icon),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-terminal),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.spreadsheet),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-git-pull-request),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-book-open),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.excalidraw-icon),
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-edit),
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit),
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus),
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus),
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc),
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical),
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up),
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down),
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings),
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
   position: relative;
 }
 
-.side-dock-ribbon-action:has(svg.lucide-layout-list)::after,
-.workspace-tab-header[data-type="file-explorer"]::after,
-.side-dock-ribbon-action:has(svg.lucide-file-search)::after,
-.workspace-tab-header[data-type="search"]::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-search)::after,
-.workspace-tab-header[data-type="starred"]::after,
-.workspace-tab-header[data-type="bookmarks"]::after,
-.side-dock-ribbon-action:has(svg.lucide-git-fork)::after,
-.side-dock-ribbon-action:has(svg.lucide-layout-dashboard)::after,
-.side-dock-ribbon-action:has(svg.lucide-calendar)::after,
-.side-dock-ribbon-action:has(svg.lucide-files)::after,
-.side-dock-ribbon-action:has(svg.templater-icon)::after,
-.side-dock-ribbon-action:has(svg.lucide-terminal)::after,
-.side-dock-ribbon-action:has(svg.lucide-layout)::after,
-.side-dock-ribbon-action:has(svg.spreadsheet)::after,
-.side-dock-ribbon-action:has(svg.lucide-git-pull-request)::after,
-.side-dock-ribbon-action:has(svg.lucide-book-open)::after,
-.side-dock-ribbon-action:has(svg.excalidraw-icon)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-edit)::after,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus)::after,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout-list)::after,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="file-explorer"]::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-file-search)::after,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="search"]::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-search)::after,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="starred"]::after,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="bookmarks"]::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-git-fork)::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout-dashboard)::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-calendar)::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-files)::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.templater-icon)::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-terminal)::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout)::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.spreadsheet)::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-git-pull-request)::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-book-open)::after,
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.excalidraw-icon)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-edit)::after,
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus)::after,
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -185,130 +185,130 @@ body {
   z-index: 2;
 }
 
-.nav-buttons-container .clickable-icon:has(svg.lucide-search)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-edit)::after,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus)::after,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down)::after,
-.nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-search)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-edit)::after,
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus)::after,
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down)::after,
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
   width: 16px;
   height: 16px;
   opacity: .82;
 }
 
-.workspace-tab-header[data-type="file-explorer"]::after,
-.workspace-tab-header[data-type="search"]::after,
-.workspace-tab-header[data-type="starred"]::after,
-.workspace-tab-header[data-type="bookmarks"]::after {
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="file-explorer"]::after,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="search"]::after,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="starred"]::after,
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="bookmarks"]::after {
   width: 18px;
   height: 18px;
   opacity: .78;
 }
 
 /* 指定每个入口使用的图标。 */
-.side-dock-ribbon-action:has(svg.lucide-layout-list) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout-list) {
   --song-icon-current: var(--song-icon-collection);
 }
 
-.workspace-tab-header[data-type="file-explorer"] {
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="file-explorer"] {
   --song-icon-current: var(--song-icon-folder);
 }
 
-.side-dock-ribbon-action:has(svg.lucide-file-search),
-.workspace-tab-header[data-type="search"],
-.nav-buttons-container .clickable-icon:has(svg.lucide-search) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-file-search),
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="search"],
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-search) {
   --song-icon-current: var(--song-icon-search);
 }
 
-.workspace-tab-header[data-type="starred"] {
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="starred"] {
   --song-icon-current: var(--song-icon-star);
 }
 
-.workspace-tab-header[data-type="bookmarks"] {
+:where(body:not(.song-original-icons)) .workspace-tab-header[data-type="bookmarks"] {
   --song-icon-current: var(--song-icon-bookmark);
 }
 
-.side-dock-ribbon-action:has(svg.lucide-git-fork) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-git-fork) {
   --song-icon-current: var(--song-icon-graph);
 }
 
-.side-dock-ribbon-action:has(svg.lucide-layout-dashboard) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout-dashboard) {
   --song-icon-current: var(--song-icon-canvas);
 }
 
-.side-dock-ribbon-action:has(svg.lucide-calendar) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-calendar) {
   --song-icon-current: var(--song-icon-daily);
 }
 
-.side-dock-ribbon-action:has(svg.lucide-files),
-.side-dock-ribbon-action:has(svg.templater-icon) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-files),
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.templater-icon) {
   --song-icon-current: var(--song-icon-templates);
 }
 
-.side-dock-ribbon-action:has(svg.lucide-terminal) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-terminal) {
   --song-icon-current: var(--song-icon-command);
 }
 
-.side-dock-ribbon-action:has(svg.lucide-layout) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-layout) {
   --song-icon-current: var(--song-icon-workspace);
 }
 
-.side-dock-ribbon-action:has(svg.spreadsheet) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.spreadsheet) {
   --song-icon-current: var(--song-icon-table);
 }
 
-.side-dock-ribbon-action:has(svg.lucide-git-pull-request) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-git-pull-request) {
   --song-icon-current: var(--song-icon-git);
 }
 
-.side-dock-ribbon-action:has(svg.lucide-book-open) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.lucide-book-open) {
   --song-icon-current: var(--song-icon-reader);
 }
 
-.side-dock-ribbon-action:has(svg.excalidraw-icon) {
+:where(body:not(.song-original-icons)) .side-dock-ribbon-action:has(svg.excalidraw-icon) {
   --song-icon-current: var(--song-icon-draw);
 }
 
-.nav-buttons-container .clickable-icon:has(svg.lucide-edit),
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit) {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-edit),
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-edit) {
   --song-icon-current: var(--song-icon-compose);
 }
 
-.nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus),
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus) {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-folder-plus),
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-folder-plus) {
   --song-icon-current: var(--song-icon-folder-plus);
 }
 
-.nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc) {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-sort-asc) {
   --song-icon-current: var(--song-icon-sort);
 }
 
-.nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical) {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical) {
   --song-icon-current: var(--song-icon-reveal);
 }
 
-.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up),
-.nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down) {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up),
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down) {
   --song-icon-current: var(--song-icon-collapse);
 }
 
-.nav-buttons-container .clickable-icon:has(svg.lucide-settings),
-.workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings),
+:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
   --song-icon-current: var(--song-icon-settings);
 }
 
 /* 文件夹双态书卷：只替换文件树原箭头，保留原点击区和缩进。 */
-body {
+body:not(.song-original-icons) {
   --song-icon-folder-scroll-closed: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgPHBhdGggZD0iTTQ0IDI4aDEyTTQ0IDcyaDEyIi8+CiAgICA8cmVjdCB4PSIyOCIgeT0iMjAiIHdpZHRoPSIxNiIgaGVpZ2h0PSI2MCIgcng9IjgiLz4KICAgIDxyZWN0IHg9IjU2IiB5PSIyMCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjYwIiByeD0iOCIvPgogIDwvZz4KPC9zdmc+Cg==");
   --song-icon-folder-scroll-open: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgPHBhdGggZD0iTTI2IDI4aDQ4TTI2IDcyaDQ4Ii8+CiAgICA8cmVjdCB4PSIxMiIgeT0iMjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSI2MCIgcng9IjciLz4KICAgIDxyZWN0IHg9Ijc0IiB5PSIyMCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjYwIiByeD0iNyIvPgogICAgPHBhdGggZD0iTTQwIDQyaDIwTTQwIDU4aDE0Ii8+CiAgPC9nPgo8L3N2Zz4K");
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon) {
+:where(body:not(.song-original-icons)) .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon) {
   --song-folder-scroll: var(--song-icon-folder-scroll-open);
   position: absolute;
   display: inline-flex;
@@ -322,18 +322,17 @@ body {
   color: var(--song-celadon-deep, var(--nav-collapse-icon-color));
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder.is-collapsed > .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon),
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title.is-collapsed > :is(.nav-folder-collapse-indicator, .collapse-icon) {
+:where(body:not(.song-original-icons)) .workspace-leaf-content[data-type="file-explorer"] .nav-folder.is-collapsed > .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon), :where(body:not(.song-original-icons)) .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title.is-collapsed > :is(.nav-folder-collapse-indicator, .collapse-icon) {
   --song-folder-scroll: var(--song-icon-folder-scroll-closed);
 }
 
 /* visibility 保留原 SVG 的占位，避免按钮尺寸随着图标变化而挤压。 */
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon) > svg {
+:where(body:not(.song-original-icons)) .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon) > svg {
   visibility: hidden;
   transform: none;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon)::after {
+:where(body:not(.song-original-icons)) .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > :is(.nav-folder-collapse-indicator, .collapse-icon)::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -346,6 +345,6 @@ body {
   pointer-events: none;
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title:hover > :is(.nav-folder-collapse-indicator, .collapse-icon) {
+:where(body:not(.song-original-icons)) .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title:hover > :is(.nav-folder-collapse-indicator, .collapse-icon) {
   color: var(--song-accent, var(--text-accent));
 }

@@ -1,8 +1,12 @@
-# 宋韵·清和
+# Songyun Qinghe · 宋韵·清和
 
 > 一套以宋式审美为线索的 Obsidian 主题。白日暖纸墨字，夜读黛蓝米白，以书卷、细线与留白承接文字。
 
-**版本：1.2.0** · 适配 Obsidian 1.6+ · 已测试 Obsidian 1.14.4（macOS）
+**版本：1.2.1** · 适配 Obsidian 1.6+ · 已测试 Obsidian 1.14.4（macOS） · [MIT License](LICENSE)
+
+Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and dark palettes, paper grain, scroll-style callouts, and matching line icons. It works offline and does not load remote fonts or images.
+
+官方主题库提交名为 **Songyun Qinghe**，中文名为「宋韵·清和」。
 
 ![宋韵·清和浅色模式](screenshots/obsidian-light.png)
 
@@ -23,7 +27,7 @@
 - **完整 Markdown 样式**：覆盖引用、表格、任务列表、标签、脚注、Callout、代码块、嵌入内容和图片。
 - **展开书卷**：引用与 Callout 采用左右双轴、细边纸面和主题颗粒，保留提示类型与折叠操作，适配阅读和实时预览。
 - **深色模式**：独立黛蓝纸面、暖金标题、青玉链接与陶红交互，同时适配表格、代码、属性、弹窗和图标。
-- **自定义图标**：22 枚宋式线描图标，覆盖左侧 Ribbon、侧栏标签和文件工具栏。
+- **内置图标**：宋式线描图标与文件夹双卷状态现已包含在主题 CSS 中，无需额外启用片段；覆盖左侧 Ribbon、侧栏标签和文件工具栏。
 - **双态书卷**：文件夹箭头替换为左右双卷，收起时靠拢，展开时舒开并露出纸面；子文件夹独立响应状态。
 - **轻量实现**：纸面颗粒由内联 CSS/SVG 生成，不依赖外部图片、字体或网络资源。
 
@@ -54,7 +58,7 @@
 
 ## 界面截图
 
-以下为 v1.2.0 在 Obsidian 1.14.4（macOS）中的实际界面，使用本文推荐字体；正文为仓库中的示例笔记。
+以下为 Obsidian 1.14.4（macOS）中的实际界面，使用本文推荐字体；正文为仓库中的示例笔记。v1.2.1 将图标内置于主题，延续图中的外观。
 
 ### 浅色模式
 
@@ -121,7 +125,7 @@
 
 图标展示页源文件：[`宋韵·清和/icon-preview.html`](宋韵·清和/icon-preview.html)
 
-文件夹双卷开合预览：[`宋韵·清和/folder-scroll-preview.html`](宋韵·清和/folder-scroll-preview.html)。启用「宋韵图标」片段后自动生效，保留原生点击与文件树缩进；关闭片段即可恢复箭头。
+文件夹双卷开合预览：[`宋韵·清和/folder-scroll-preview.html`](宋韵·清和/folder-scroll-preview.html)。v1.2.1 默认内置双卷图标，保留原生点击与文件树缩进。
 
 [查看图标展示页完整长图](screenshots/icon-preview-full.png)
 
@@ -135,15 +139,10 @@
    <你的 Vault>/.obsidian/themes/宋韵·清和/
    ```
 
-2. 将 `snippets/宋韵图标.css` 复制到：
+2. 打开 Obsidian，进入「设置 → 外观」。
+3. 在主题列表中选择「宋韵·清和」。主题已包含宋韵图标，无需额外片段。
 
-   ```text
-   <你的 Vault>/.obsidian/snippets/宋韵图标.css
-   ```
-
-3. 打开 Obsidian，进入「设置 → 外观」。
-4. 在主题列表中选择「宋韵·清和」。
-5. 在「CSS 代码片段」中启用「宋韵图标」。
+独立的 `snippets/宋韵图标.css` 仍保留，供旧版主题或仅需要图标的用户使用。升级到 v1.2.1 后，可关闭之前单独启用的「宋韵图标」片段，避免重复加载。
 
 ### 方式二：命令行
 
@@ -152,18 +151,16 @@ git clone https://github.com/jackyoung022/Obsidian-SongStyle.git
 
 VAULT="/path/to/your/vault"
 cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
-mkdir -p "$VAULT/.obsidian/snippets"
-cp Obsidian-SongStyle/snippets/宋韵图标.css "$VAULT/.obsidian/snippets/"
 ```
 
 ### 方式三：发布包
 
-下载仓库中的 [`dist/Obsidian-SongStyle-v1.2.0.zip`](dist/Obsidian-SongStyle-v1.2.0.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
+下载仓库中的 [`dist/Obsidian-SongStyle-v1.2.1.zip`](dist/Obsidian-SongStyle-v1.2.1.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
 
 - 将 `Songyun-Qinghe/` 复制到 `.obsidian/themes/`。
-- 将 `songyun-icons.css` 复制到 `.obsidian/snippets/`。
+- 图标已内置，`snippets/songyun-icons.css` 为可选的独立片段。
 
-Obsidian 中显示的主题名仍为「宋韵·清和」。
+手动安装包显示为「宋韵·清和」；官方目录使用根目录清单中的 **Songyun Qinghe**。
 
 ## 设置
 
@@ -195,10 +192,11 @@ Obsidian 中显示的主题名仍为「宋韵·清和」。
 安装 [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) 后，在主题设置里可以调整：
 
 - **正文栏宽度**：默认 `780px`，范围 `640–1040px`。
+- **使用 Obsidian 原生图标**：开启后恢复原生图标；默认关闭，显示宋韵图标。
 
 ### 恢复原生图标
 
-进入「设置 → 外观 → CSS 代码片段」，关闭「宋韵图标」即可。主题颜色、排版和背景不会受到影响。
+在 Style Settings 的「宋韵·清和」设置中，开启「使用 Obsidian 原生图标」。如果此前还启用了旧版独立的「宋韵图标」片段，也请关闭该片段。
 
 ### 恢复其他主题
 
@@ -225,6 +223,13 @@ Obsidian 中显示的主题名仍为「宋韵·清和」。
 ```text
 Obsidian-SongStyle/
 ├── README.md
+├── LICENSE
+├── manifest.json              # 官方目录读取的清单：Songyun Qinghe
+├── theme.css                  # 可直接安装的完整主题，含内置图标
+├── screenshot.png             # 512×288 商店预览
+├── versions.json
+├── scripts/
+│   └── prepare_release.py     # 同步主题文件并构建手动安装包
 ├── 宋韵·清和/
 │   ├── manifest.json
 │   ├── theme.css
@@ -255,7 +260,7 @@ Obsidian-SongStyle/
 │   ├── 宋韵深色主题预览.md
 │   └── 宋韵书卷展示.md
 └── dist/
-    └── Obsidian-SongStyle-v1.2.0.zip
+    └── Obsidian-SongStyle-v1.2.1.zip
 ```
 
 ## 兼容性
@@ -274,6 +279,13 @@ Obsidian-SongStyle/
 - 预览截图使用仓库内的示例笔记，不包含个人笔记内容。
 
 ## 更新记录
+
+### 1.2.1
+
+- 准备官方主题库提交，根目录补齐 `manifest.json`、`theme.css` 和商店预览图。
+- 官方提交名为 Songyun Qinghe，保留中文品牌「宋韵·清和」。
+- 将宋韵图标与双卷文件夹内置到主题，增加恢复原生图标的可选设置。
+- 添加 MIT 许可证和可重复执行的发布构建脚本。
 
 ### 1.2.0
 
@@ -305,4 +317,6 @@ Obsidian-SongStyle/
 
 ## License
 
-本仓库未附带开源许可证。使用、修改或再分发前请先联系作者。
+本项目的原创主题 CSS、图标与文档采用 [MIT License](LICENSE)。使用、修改和再分发时，请保留版权及许可声明。
+
+Obsidian 商标与第三方字体属于各自的权利人；主题包不附带第三方字体文件。

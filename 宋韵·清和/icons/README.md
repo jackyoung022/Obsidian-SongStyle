@@ -38,7 +38,9 @@
 | `collapse.svg` | 展开/折叠全部文件夹 |
 | `settings.svg` | 设置 |
 
-替换规则在 `.obsidian/snippets/宋韵图标.css`。停用这个 CSS 片段即可恢复 Obsidian 原生图标。
+v1.2.1 已将替换规则内置到主题。安装 Style Settings 后，开启「使用 Obsidian 原生图标」即可恢复原生外观。
+
+独立片段 `snippets/宋韵图标.css` 仍可用于旧版主题或单独使用图标；仅在使用独立片段时，停用片段即可恢复原生图标。
 
 ## 设计约束
 
