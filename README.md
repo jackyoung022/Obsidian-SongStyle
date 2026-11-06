@@ -2,11 +2,11 @@
 
 > 一套以宋式审美为线索的 Obsidian 主题。白日暖纸墨字，夜读黛蓝米白，以书卷、细线与留白承接文字。
 
-**版本：1.2.1** · 适配 Obsidian 1.6+ · 已测试 Obsidian 1.14.4（macOS） · [MIT License](LICENSE)
+**版本：1.2.2** · 适配 Obsidian 1.6+ · [MIT License](LICENSE)
 
 Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and dark palettes, paper grain, scroll-style callouts, and matching line icons. It works offline and does not load remote fonts or images.
 
-官方主题库提交名为 **Songyun Qinghe**，中文名为「宋韵·清和」。
+官方主题库名称为 [Songyun Qinghe](https://community.obsidian.md/themes/songyun-qinghe)，中文名为「宋韵·清和」。
 
 ![宋韵·清和浅色模式](screenshots/obsidian-light.png)
 
@@ -131,6 +131,10 @@ Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and 
 
 ## 安装
 
+### 从官方主题库安装
+
+进入「设置 → 外观 → 主题 → 管理」，搜索 **Songyun Qinghe**，安装后启用。已安装的用户可在外观设置中检查主题更新。
+
 ### 方式一：手动安装
 
 1. 将 `宋韵·清和/` 复制到你的 vault：
@@ -155,7 +159,7 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 
 ### 方式三：发布包
 
-下载仓库中的 [`dist/Obsidian-SongStyle-v1.2.1.zip`](dist/Obsidian-SongStyle-v1.2.1.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
+下载仓库中的 [`dist/Obsidian-SongStyle-v1.2.2.zip`](dist/Obsidian-SongStyle-v1.2.2.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
 
 - 将 `Songyun-Qinghe/` 复制到 `.obsidian/themes/`。
 - 图标已内置，`snippets/songyun-icons.css` 为可选的独立片段。
@@ -173,7 +177,7 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 | 正文 | 霞鹜文楷 | `LXGW WenKai` | 笔画舒展，用于札记和长文。[官方项目与下载](https://github.com/lxgw/LxgwWenKai) |
 | 界面 | 阿里巴巴普惠体 2.0 | `Alibaba PuHuiTi 2.0` | 用于文件列表、设置和工具栏，让小字号信息保持清楚。[官方字体站](https://www.alibabafonts.com/) |
 | 代码 | JetBrains Mono | `JetBrains Mono` | 用于代码块和等宽文本，代码中的中文由后续字体回退显示。[官方下载](https://www.jetbrains.com/lp/mono/) |
-| 标题、卷首题签 | 宋体 / 思源宋体 | `Songti SC` / `Source Han Serif SC` | 主题优先使用 macOS 宋体；其他平台可安装[思源宋体](https://github.com/adobe-fonts/source-han-serif)。标题宋体由主题控制。 |
+| 标题、卷首题签 | 宋体 / 思源宋体 | `Songti SC` / `Source Han Serif SC` | 未指定正文字体时优先使用宋体。手动更换正文字体后，标题、引用和题签会随之更新。其他平台可安装[思源宋体](https://github.com/adobe-fonts/source-han-serif)。 |
 
 截图使用的设置：
 
@@ -185,7 +189,7 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 正文行宽：780px（主题默认值）
 ```
 
-安装后如字体列表尚未刷新，重新打开 Obsidian 再选择。不同版本字体可能显示中文名称，选择对应的字体家族即可。未安装推荐字体时，主题会回退到系统字体；标题的回退顺序见主题 CSS 的 `--song-serif`。
+自 v1.2.2 起，Obsidian 的界面、正文与等宽字体设置优先于主题默认值。安装字体后如列表尚未刷新，重新打开 Obsidian 再选择。不同版本字体可能显示中文名称，选择对应的字体家族即可。未安装所选字体时，会使用主题与系统提供的后备字体。
 
 ### Style Settings（可选）
 
@@ -260,7 +264,7 @@ Obsidian-SongStyle/
 │   ├── 宋韵深色主题预览.md
 │   └── 宋韵书卷展示.md
 └── dist/
-    └── Obsidian-SongStyle-v1.2.1.zip
+    └── Obsidian-SongStyle-v1.2.2.zip
 ```
 
 ## 兼容性
@@ -279,6 +283,11 @@ Obsidian-SongStyle/
 - 预览截图使用仓库内的示例笔记，不包含个人笔记内容。
 
 ## 更新记录
+
+### 1.2.2
+
+- 修复 Obsidian 外观设置中的界面、正文和等宽字体选择被主题覆盖的问题。标题、引用及提示块题签也跟随正文选择。
+- 左下角设置按钮恢复原生齿轮，沿用 Obsidian 默认图标尺寸和点击区域。
 
 ### 1.2.1
 

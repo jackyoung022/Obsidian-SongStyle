@@ -48,7 +48,7 @@
 | 等宽 | [JetBrains Mono](https://www.jetbrains.com/lp/mono/) | `JetBrains Mono` |
 | 标题 | macOS 宋体 / [思源宋体](https://github.com/adobe-fonts/source-han-serif) | 由主题自动使用 `Songti SC` / `Source Han Serif SC` |
 
-截图使用 16px 正文和 780px 主题默认行宽。未安装上述字体时，会使用系统回退字体。安装后如字体尚未显示，请重新打开 Obsidian。
+截图使用 16px 正文和 780px 主题默认行宽。v1.2.2 起，手动选择的界面、正文及等宽字体优先于主题默认值，标题与引用跟随正文选择。安装后如字体尚未显示，请重新打开 Obsidian。
 
 ## 设计取意
 

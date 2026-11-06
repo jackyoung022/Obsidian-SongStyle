@@ -107,8 +107,7 @@ body:not(.song-original-icons) {
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical) svg,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up) svg,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down) svg,
-:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings) svg,
-:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) svg {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings) svg {
   display: none !important;
 }
 
@@ -138,8 +137,7 @@ body:not(.song-original-icons) {
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical),
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up),
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down),
-:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings),
-:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings) {
   position: relative;
 }
 
@@ -169,8 +167,7 @@ body:not(.song-original-icons) {
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical)::after,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up)::after,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down)::after,
-:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
-:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -194,8 +191,7 @@ body:not(.song-original-icons) {
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical)::after,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up)::after,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down)::after,
-:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
-:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after {
   width: 16px;
   height: 16px;
   opacity: .82;
@@ -297,8 +293,8 @@ body:not(.song-original-icons) {
   --song-icon-current: var(--song-icon-collapse);
 }
 
-:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings),
-:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
+/* The main settings gear in vault actions uses Obsidian's native SVG and sizing. */
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings) {
   --song-icon-current: var(--song-icon-settings);
 }
 

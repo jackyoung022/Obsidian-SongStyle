@@ -86,12 +86,12 @@ body {
     "Noto Serif CJK SC", serif;
   --font-monospace-theme: "JetBrains Mono", "SFMono-Regular", "Menlo",
     "LXGW WenKai Mono", monospace;
-  --font-text: var(--font-text-theme);
-  --font-interface: var(--font-interface-theme);
-  --font-monospace: var(--font-monospace-theme);
-  --song-serif: "Songti SC", "STSong", "Noto Serif CJK SC",
+  /* Obsidian resolves --font-*-override before the theme's defaults. */
+  --song-serif-default: "Songti SC", "STSong", "Noto Serif CJK SC",
     "Source Han Serif SC", serif;
-  --song-sans: var(--font-interface-theme);
+  --song-serif: var(--font-text-override, "??"), var(--song-serif-default);
+  --song-interface-serif: var(--font-interface-override, "??"), var(--song-serif-default);
+  --song-sans: var(--font-interface);
 
   --background-primary: var(--song-paper-front);
   --background-primary-alt: var(--song-paper);
@@ -771,7 +771,7 @@ body {
 
 .view-header-title {
   color: var(--song-muted);
-  font-family: var(--song-serif);
+  font-family: var(--song-interface-serif);
   font-size: 0.92em;
   letter-spacing: 0.035em;
 }
@@ -1472,7 +1472,7 @@ a.tag:hover {
 
 .metadata-property-key {
   color: var(--song-muted);
-  font-family: var(--song-serif);
+  font-family: var(--song-interface-serif);
   font-size: 0.88em;
   letter-spacing: 0.025em;
 }
@@ -1517,7 +1517,7 @@ a.tag:hover {
 
 .graph-controls .graph-control-section-header {
   color: var(--song-ink-soft);
-  font-family: var(--song-serif);
+  font-family: var(--song-interface-serif);
 }
 
 .canvas-wrapper,
@@ -1550,7 +1550,7 @@ a.tag:hover {
 
 .modal-title {
   color: var(--song-ink);
-  font-family: var(--song-serif);
+  font-family: var(--song-interface-serif);
   letter-spacing: 0.03em;
 }
 
@@ -1586,7 +1586,7 @@ a.tag:hover {
 
 .prompt-input {
   color: var(--song-ink);
-  font-family: var(--song-serif);
+  font-family: var(--song-interface-serif);
   font-size: 1.06em;
   letter-spacing: 0.02em;
 }
@@ -1767,7 +1767,7 @@ button.mod-warning {
 
 .empty-state-title {
   color: var(--song-ink);
-  font-family: var(--song-serif);
+  font-family: var(--song-interface-serif);
   letter-spacing: 0.04em;
 }
 
@@ -1946,8 +1946,7 @@ body:not(.song-original-icons) {
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical) svg,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up) svg,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down) svg,
-:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings) svg,
-:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) svg {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings) svg {
   display: none !important;
 }
 
@@ -1977,8 +1976,7 @@ body:not(.song-original-icons) {
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical),
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up),
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down),
-:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings),
-:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings) {
   position: relative;
 }
 
@@ -2008,8 +2006,7 @@ body:not(.song-original-icons) {
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical)::after,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up)::after,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down)::after,
-:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
-:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -2033,8 +2030,7 @@ body:not(.song-original-icons) {
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-gallery-vertical)::after,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-down-up)::after,
 :where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-chevrons-up-down)::after,
-:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after,
-:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings)::after {
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings)::after {
   width: 16px;
   height: 16px;
   opacity: .82;
@@ -2136,8 +2132,8 @@ body:not(.song-original-icons) {
   --song-icon-current: var(--song-icon-collapse);
 }
 
-:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings),
-:where(body:not(.song-original-icons)) .workspace-drawer-vault-actions .clickable-icon:has(svg.lucide-settings) {
+/* The main settings gear in vault actions uses Obsidian's native SVG and sizing. */
+:where(body:not(.song-original-icons)) .nav-buttons-container .clickable-icon:has(svg.lucide-settings) {
   --song-icon-current: var(--song-icon-settings);
 }
 
