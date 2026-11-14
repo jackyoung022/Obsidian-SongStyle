@@ -2,7 +2,7 @@
 
 > 一套以宋式审美为线索的 Obsidian 主题。白日暖纸墨字，夜读黛蓝米白，以书卷、细线与留白承接文字。
 
-**版本：1.2.2** · 适配 Obsidian 1.6+ · [MIT License](LICENSE)
+**版本：1.2.3** · 适配 Obsidian 1.6+ · [MIT License](LICENSE)
 
 Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and dark palettes, paper grain, scroll-style callouts, and matching line icons. It works offline and does not load remote fonts or images.
 
@@ -159,7 +159,7 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 
 ### 方式三：发布包
 
-下载仓库中的 [`dist/Obsidian-SongStyle-v1.2.2.zip`](dist/Obsidian-SongStyle-v1.2.2.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
+下载仓库中的 [`dist/Obsidian-SongStyle-v1.2.3.zip`](dist/Obsidian-SongStyle-v1.2.3.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
 
 - 将 `Songyun-Qinghe/` 复制到 `.obsidian/themes/`。
 - 图标已内置，`snippets/songyun-icons.css` 为可选的独立片段。
@@ -264,7 +264,7 @@ Obsidian-SongStyle/
 │   ├── 宋韵深色主题预览.md
 │   └── 宋韵书卷展示.md
 └── dist/
-    └── Obsidian-SongStyle-v1.2.2.zip
+    └── Obsidian-SongStyle-v1.2.3.zip
 ```
 
 ## 兼容性
@@ -283,6 +283,10 @@ Obsidian-SongStyle/
 - 预览截图使用仓库内的示例笔记，不包含个人笔记内容。
 
 ## 更新记录
+
+### 1.2.3
+
+- 编辑代码块时，当前行沿用代码块的深色背景，避免浅色高亮降低文字对比度。普通正文的当前行高亮保留。
 
 ### 1.2.2
 

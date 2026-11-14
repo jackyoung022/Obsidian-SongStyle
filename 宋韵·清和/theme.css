@@ -834,7 +834,8 @@ body:is(.theme-light, .theme-dark) .workspace-split.mod-right-split {
   padding-inline: 0.15em;
 }
 
-.markdown-source-view.mod-cm6 .cm-active.cm-line {
+/* The prose highlight must not replace a fenced code block's dark surface. */
+.markdown-source-view.mod-cm6 .cm-active.cm-line:not(:where(.HyperMD-codeblock, .HyperMD-codeblock-bg)) {
   background: linear-gradient(90deg, rgba(var(--song-celadon-rgb), 0.14), transparent 92%);
 }
 
