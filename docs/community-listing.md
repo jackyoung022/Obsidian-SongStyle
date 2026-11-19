@@ -22,7 +22,8 @@ Songyun Qinghe (宋韵·清和) brings the quiet colors and generous whitespace 
 - Scroll-style blockquotes and callouts, with the original folding and editing controls.
 - Matching line icons and folder scrolls that open and close with the folder.
 - Styles for headings, links, tags, tables, code blocks and properties.
-- Optional Style Settings controls for reading width and native icons.
+- Optional Style Settings controls for reading width, native icons, and the paper-tab outline.
+- When Floating TOC is installed on the left, its heading rail can adopt the theme's compact paper tabs and be hidden from Style Settings.
 
 No remote fonts or images are loaded. Recommended fonts are listed in the README and are optional. Font fallbacks are included.
 

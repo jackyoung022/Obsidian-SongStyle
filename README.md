@@ -2,7 +2,7 @@
 
 > 一套以宋式审美为线索的 Obsidian 主题。白日暖纸墨字，夜读黛蓝米白，以书卷、细线与留白承接文字。
 
-**版本：1.2.3** · 适配 Obsidian 1.6+ · [MIT License](LICENSE)
+**版本：1.2.4** · 适配 Obsidian 1.6+ · [MIT License](LICENSE)
 
 Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and dark palettes, paper grain, scroll-style callouts, and matching line icons. It works offline and does not load remote fonts or images.
 
@@ -24,6 +24,7 @@ Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and 
 - **层次化配色**：正文、次文字、标签、标题和代码各有独立色阶，不依赖大面积高饱和色。
 - **宋版标题**：标题使用宋体，浅色 H1 以绛红呈现，深色 H1 使用暖金；H2 以灰绿或青玉细竖线建立秩序。
 - **阅读优化**：正文行高、段距和行宽均为长文阅读调整，最大行宽可在 Style Settings 中调整。
+- **可选页边纸签目录**：配合 Floating TOC 在正文左侧显示紧凑纸签；静止时隐藏文字，悬停原位展开，当前章节轻微突出。
 - **完整 Markdown 样式**：覆盖引用、表格、任务列表、标签、脚注、Callout、代码块、嵌入内容和图片。
 - **展开书卷**：引用与 Callout 采用左右双轴、细边纸面和主题颗粒，保留提示类型与折叠操作，适配阅读和实时预览。
 - **深色模式**：独立黛蓝纸面、暖金标题、青玉链接与陶红交互，同时适配表格、代码、属性、弹窗和图标。
@@ -159,7 +160,7 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 
 ### 方式三：发布包
 
-下载仓库中的 [`dist/Obsidian-SongStyle-v1.2.3.zip`](dist/Obsidian-SongStyle-v1.2.3.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
+下载仓库中的 [`dist/Obsidian-SongStyle-v1.2.4.zip`](dist/Obsidian-SongStyle-v1.2.4.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
 
 - 将 `Songyun-Qinghe/` 复制到 `.obsidian/themes/`。
 - 图标已内置，`snippets/songyun-icons.css` 为可选的独立片段。
@@ -197,6 +198,17 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 
 - **正文栏宽度**：默认 `780px`，范围 `640–1040px`。
 - **使用 Obsidian 原生图标**：开启后恢复原生图标；默认关闭，显示宋韵图标。
+- **隐藏页边纸签目录**：默认关闭。安装并启用 Floating TOC、位置设为左侧时，开启此项可隐藏目录并取消左侧留白。
+
+### 页边纸签目录（可选）
+
+主题会为 [Floating TOC](https://github.com/PKM-er/obsidian-floating-toc-plugin) 提供龙鳞纸签样式，但目录的标题读取、展开、定位与滚动跟随由该插件完成，主题本身不生成动态目录。
+
+![页边纸签目录](screenshots/floating-toc-paper.png)
+
+1. 安装并启用 Floating TOC。
+2. 在插件设置中把目录位置设为 **Left**。
+3. 如需关闭，在 Style Settings 的「宋韵·清和」设置中开启「隐藏页边纸签目录」。
 
 ### 恢复原生图标
 
@@ -264,7 +276,7 @@ Obsidian-SongStyle/
 │   ├── 宋韵深色主题预览.md
 │   └── 宋韵书卷展示.md
 └── dist/
-    └── Obsidian-SongStyle-v1.2.3.zip
+    └── Obsidian-SongStyle-v1.2.4.zip
 ```
 
 ## 兼容性
@@ -272,7 +284,7 @@ Obsidian-SongStyle/
 - 最低 Obsidian 版本：`1.6.0`
 - 实测版本：`1.14.4`（macOS）
 - 图标替换依赖现代 CSS `:has()` 选择器
-- 不依赖额外插件；Style Settings 仅用于可选的行宽设置
+- 核心主题不依赖额外插件；可选的页边纸签目录需要 Floating TOC 与 Style Settings
 - 主题 CSS 不引用远程字体或图片
 
 ## 设计说明
@@ -283,6 +295,14 @@ Obsidian-SongStyle/
 - 预览截图使用仓库内的示例笔记，不包含个人笔记内容。
 
 ## 更新记录
+
+### 1.2.4
+
+- 新增可选的页边纸签目录样式，配合 Floating TOC 使用；标题按章节层级左对齐，子标题收紧分组。
+- 目录静止时不显示标题，仅轻微突出当前章节；悬停纸签时原位展开并显示标题。
+- 正文起点改为随窗口缩放的紧凑左距，缩短目录与文章之间的空白；关闭目录后恢复居中。
+- Style Settings 新增「隐藏页边纸签目录」，默认显示，可隐藏插件目录并取消左侧留白。
+- 新增页边目录预览截图和 Floating TOC 安装说明。
 
 ### 1.2.3
 

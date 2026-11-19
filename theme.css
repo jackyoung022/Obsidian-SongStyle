@@ -19,6 +19,12 @@ settings:
     description: 开启后恢复原生图标；关闭时使用宋韵线描图标与双卷文件夹。
     type: class-toggle
     default: false
+  -
+    id: song-hide-floating-toc
+    title: 隐藏页边纸签目录
+    description: 默认显示。安装并启用 Floating TOC、位置设为左侧时生效；开启后隐藏该目录并取消左侧留白。
+    type: class-toggle
+    default: false
 
 */
 
@@ -1833,6 +1839,276 @@ button.mod-warning {
 
   .markdown-rendered pre {
     box-shadow: none;
+  }
+}
+
+/* ---------- Floating TOC: Songyun paper-tab outline ---------- */
+
+/* Style Settings: body.song-hide-floating-toc disables the optional plugin outline. */
+body.song-hide-floating-toc .workspace-leaf-content[data-type="markdown"] .floating-toc-div {
+  display: none !important;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left {
+  --floating-toc-font-size: 13px;
+  --floating-toc-line-height: 28px;
+  --floating-toc-response-time: 0.12s;
+  --floating-toc-line-width: 148px;
+  --floating-toc-header-background-color: transparent;
+  --floating-toc-background-color: transparent;
+  --floating-toc-font-color: var(--song-ink-soft, var(--text-normal));
+  --floating-toc-hover-color: var(--song-accent, var(--text-accent));
+  --song-paper-tab-width: 24px;
+  --song-paper-tab-height: 9px;
+  --song-paper-row-height: 9px;
+  --song-paper-indent: 0px;
+  pointer-events: none;
+  z-index: 8;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left > .toolbar {
+  display: none;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left > ul.floating-toc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 0;
+  width: 206px;
+  min-width: 0;
+  max-width: 206px;
+  min-height: 0;
+  height: fit-content;
+  left: max(2px, var(--floating-toc-position, 2px));
+  padding: 3px 3px 12px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  pointer-events: none;
+  transition: none;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left > ul.floating-toc > li.heading-list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 44px;
+  max-width: 44px;
+  height: var(--song-paper-row-height);
+  min-height: var(--song-paper-row-height);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  opacity: 1;
+  pointer-events: none;
+  transform: none;
+  transition: height 150ms ease, min-height 150ms ease, margin 150ms ease, transform 150ms ease;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item[data-level="1"] {
+  --song-paper-tab-width: 28px;
+  --song-paper-tab-height: 10px;
+  --song-paper-row-height: 10px;
+  --song-paper-indent: 0px;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item[data-level="3"] {
+  --song-paper-tab-width: 18px;
+  --song-paper-tab-height: 7px;
+  --song-paper-row-height: 7px;
+  --song-paper-indent: 0px;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item[data-level="4"] {
+  --song-paper-tab-width: 14px;
+  --song-paper-tab-height: 6px;
+  --song-paper-row-height: 6px;
+  --song-paper-indent: 0px;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item:is([data-level="5"], [data-level="6"]) {
+  --song-paper-tab-width: 12px;
+  --song-paper-tab-height: 6px;
+  --song-paper-row-height: 6px;
+  --song-paper-indent: 0px;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left > ul.floating-toc > li.heading-list-item + li.heading-list-item {
+  margin-top: 5px;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left > ul.floating-toc > li.heading-list-item + li.heading-list-item[data-level="2"] {
+  margin-top: 8px;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left > ul.floating-toc > li.heading-list-item[data-level="1"] + li.heading-list-item[data-level="2"] {
+  margin-top: 5px;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left > ul.floating-toc > li.heading-list-item + li.heading-list-item:is([data-level="3"], [data-level="4"], [data-level="5"], [data-level="6"]) {
+  margin-top: 2px;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left ul.floating-toc > li.heading-list-item:is(:hover, :focus-within) {
+  height: 38px;
+  min-height: 38px;
+  margin-block: 4px;
+  transform: translateY(-2px);
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left ul.floating-toc > li.heading-list-item > .line-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  width: 44px;
+  height: 100%;
+  padding: 0 4px 0 calc(4px + var(--song-paper-indent));
+  z-index: 0;
+  opacity: 1;
+  pointer-events: auto;
+  animation: none;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item > .line-wrap > .line {
+  position: relative;
+  top: auto;
+  left: auto;
+  display: block;
+  width: var(--song-paper-tab-width);
+  height: var(--song-paper-tab-height);
+  border: 1px solid rgba(var(--song-warm-gray-rgb, 142, 128, 117), 0.22);
+  border-left-width: 2px;
+  border-radius: 1px 1px 3px 1px;
+  background: rgba(var(--song-paper-front-rgb, 248, 243, 233), 0.14);
+  backdrop-filter: blur(3px);
+  opacity: 1;
+  scale: 1;
+  filter: none;
+  pointer-events: none;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item[data-level="2"] > .line-wrap > .line {
+  background-color: rgba(var(--song-celadon-rgb, 183, 197, 183), 0.14);
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item[data-level="3"] > .line-wrap > .line {
+  background-color: rgba(var(--song-warm-gray-rgb, 142, 128, 117), 0.10);
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item:is([data-level="4"], [data-level="5"], [data-level="6"]) > .line-wrap > .line {
+  background-color: rgba(var(--song-rouge-light-rgb, 183, 111, 106), 0.08);
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item.located > .line-wrap > .line {
+  border-color: var(--song-rouge-light, var(--text-accent));
+  background-color: rgba(var(--song-rouge-light-rgb, 183, 111, 106), 0.22);
+  box-shadow: 0 0 0 1px rgba(var(--song-rouge-light-rgb, 183, 111, 106), 0.10);
+}
+
+/* Only the current or pointed tab expands; the plugin's whole-list menu stays off. */
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left ul.floating-toc > li.heading-list-item > .text-wrap {
+  display: inline-flex;
+  position: absolute;
+  left: calc(4px + var(--song-paper-indent));
+  top: 50%;
+  width: max-content;
+  max-width: clamp(112px, 11vw, 146px);
+  min-height: 27px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity 100ms ease;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item:not(:hover):not(:focus-within) > .text-wrap {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left ul.floating-toc > li.heading-list-item:is(:hover, :focus-within) > .text-wrap {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item > .text-wrap > a.text {
+  display: block;
+  position: relative;
+  width: max-content;
+  max-width: clamp(112px, 11vw, 146px);
+  min-height: 27px;
+  margin: 0;
+  padding: 4px 13px 4px 10px;
+  border: 1px solid rgba(var(--song-warm-gray-rgb, 142, 128, 117), 0.30);
+  border-radius: 1px 1px 5px 1px;
+  background: rgba(var(--song-paper-front-rgb, 248, 243, 233), 0.80);
+  backdrop-filter: blur(7px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: var(--song-ink-soft, var(--text-normal));
+  font: 13px/17px var(--song-serif, var(--font-text));
+  white-space: normal;
+  text-wrap: wrap;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item.located > .text-wrap > a.text {
+  color: var(--song-accent, var(--text-accent));
+  border-color: rgba(var(--song-rouge-light-rgb, 183, 111, 106), 0.52);
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left a.text :is(p, h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item > .text-wrap > a.text::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  bottom: -1px;
+  right: -1px;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, rgba(var(--song-warm-gray-rgb, 142, 128, 117), 0.15) 48%, transparent 53%);
+  border-radius: 0 0 4px 0;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item::before,
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item > .heading-rendered::before {
+  content: none;
+}
+
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left ~ .markdown-reading-view,
+body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left + .markdown-source-view > .cm-editor {
+  padding-left: 0;
+}
+
+/* Keep the article close to the paper tabs; the inset scales with the window. */
+body:not(.song-hide-floating-toc):is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"]:has(.floating-toc-div.floating-left) .markdown-reading-view .markdown-preview-sizer,
+body:not(.song-hide-floating-toc):is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"]:has(.floating-toc-div.floating-left) .markdown-source-view.mod-cm6 .cm-sizer {
+  margin-inline: clamp(3rem, 7.5vw, 6rem) auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item,
+  body:is(.theme-light, .theme-dark) .workspace-leaf-content[data-type="markdown"] .floating-toc-div.floating-left .heading-list-item > .text-wrap {
+    transition: none;
   }
 }
 
