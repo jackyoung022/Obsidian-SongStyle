@@ -1,7 +1,7 @@
 {
   "id": "songyun-outline",
   "name": "Songyun Outline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.6.0",
   "description": "A Song-style floating paper-tab outline for Songyun Qinghe and compatible themes.",
   "author": "Jack",

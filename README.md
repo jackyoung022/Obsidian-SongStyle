@@ -8,7 +8,7 @@ Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and 
 
 官方主题库名称为 [Songyun Qinghe](https://community.obsidian.md/themes/songyun-qinghe)，中文名为「宋韵·清和」。
 
-**配套插件：** [Songyun Outline 1.0.0](https://github.com/jackyoung022/Obsidian-SongStyle/releases/tag/songyun-outline-v1.0.0) 为主题提供可选的页边纸签目录。插件独立安装、独立更新，不参与主题包升级。
+**配套插件：** [Songyun Outline 1.0.1](https://github.com/jackyoung022/Obsidian-SongStyle/releases/tag/songyun-outline-v1.0.1) 为主题提供可选的页边纸签目录。插件独立安装、独立更新，不参与主题包升级。
 
 ![宋韵·清和浅色模式](screenshots/obsidian-light.png)
 
@@ -208,7 +208,7 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 
 ![页边纸签目录](screenshots/floating-toc-paper.png)
 
-1. 从 [Songyun Outline 1.0.0 Release](https://github.com/jackyoung022/Obsidian-SongStyle/releases/tag/songyun-outline-v1.0.0) 下载 `Songyun-Outline-v1.0.0.zip`，或直接使用仓库中的 `songyun-outline/`。
+1. 从 [Songyun Outline 1.0.1 Release](https://github.com/jackyoung022/Obsidian-SongStyle/releases/tag/songyun-outline-v1.0.1) 下载 `Songyun-Outline-v1.0.1.zip`，或直接使用仓库中的 `songyun-outline/`。
 2. 将压缩包内的 `songyun-outline/` 文件夹放入 `<你的 Vault>/.obsidian/plugins/`。
 3. 在 Obsidian 的「设置 → 第三方插件」中重新加载并启用 **Songyun Outline**。
 4. 插件设置可分别控制阅读视图、编辑视图和移动端显示。

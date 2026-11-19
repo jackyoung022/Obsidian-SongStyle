@@ -218,20 +218,10 @@
   opacity: 1;
 }
 
-.view-content.songyun-outline-host .markdown-reading-view .markdown-preview-sizer,
-.view-content.songyun-outline-host .markdown-source-view.mod-cm6 .cm-sizer {
-  margin-inline: clamp(3rem, 7.5vw, 6rem) auto !important;
-}
-
 @media (max-width: 760px) {
   .songyun-outline {
     left: 3px;
     width: min(132px, 34vw);
-  }
-
-  .view-content.songyun-outline-host .markdown-reading-view .markdown-preview-sizer,
-  .view-content.songyun-outline-host .markdown-source-view.mod-cm6 .cm-sizer {
-    margin-inline: 0 auto !important;
   }
 }
 
