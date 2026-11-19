@@ -1,0 +1,245 @@
+.view-content.songyun-outline-host {
+  position: relative;
+}
+
+.songyun-outline {
+  --songyun-outline-label-max: clamp(112px, 11vw, 146px);
+  position: absolute;
+  z-index: 20;
+  top: var(--songyun-outline-top, 82px);
+  bottom: 38px;
+  left: 6px;
+  width: var(--songyun-outline-label-max);
+  pointer-events: none;
+}
+
+.songyun-outline-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+  pointer-events: none;
+}
+
+.songyun-outline-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.songyun-outline-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.songyun-outline-item {
+  --songyun-paper-width: 24px;
+  --songyun-paper-height: 9px;
+  --songyun-row-height: 9px;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  min-height: var(--songyun-row-height);
+  margin: 0;
+  padding: 0;
+}
+
+.songyun-outline-item.is-level-1 {
+  --songyun-paper-width: 28px;
+  --songyun-paper-height: 10px;
+  --songyun-row-height: 10px;
+}
+
+.songyun-outline-item.is-level-3 {
+  --songyun-paper-width: 18px;
+  --songyun-paper-height: 7px;
+  --songyun-row-height: 7px;
+}
+
+.songyun-outline-item.is-level-4 {
+  --songyun-paper-width: 14px;
+  --songyun-paper-height: 6px;
+  --songyun-row-height: 6px;
+}
+
+.songyun-outline-item:is(.is-level-5, .is-level-6) {
+  --songyun-paper-width: 12px;
+  --songyun-paper-height: 6px;
+  --songyun-row-height: 6px;
+}
+
+.songyun-outline-item + .songyun-outline-item {
+  margin-top: 5px;
+}
+
+.songyun-outline-item + .songyun-outline-item.is-level-2 {
+  margin-top: 8px;
+}
+
+.songyun-outline-item.is-level-1 + .songyun-outline-item.is-level-2 {
+  margin-top: 5px;
+}
+
+.songyun-outline-item + .songyun-outline-item:is(.is-level-3, .is-level-4, .is-level-5, .is-level-6) {
+  margin-top: 2px;
+}
+
+.songyun-outline-tab {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: max-content;
+  max-width: var(--songyun-paper-width);
+  height: auto;
+  max-height: var(--songyun-paper-height);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(var(--song-warm-gray-rgb, 142, 128, 117), 0.22);
+  border-left-width: 2px;
+  border-radius: 1px 1px 3px 1px;
+  background-color: rgba(var(--song-paper-front-rgb, 248, 243, 233), 0.14);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.025);
+  color: var(--song-ink-soft, var(--text-normal));
+  font: 13px/17px var(--song-serif, var(--font-text));
+  text-decoration: none;
+  white-space: normal;
+  text-wrap: wrap;
+  overflow-wrap: anywhere;
+  pointer-events: auto;
+  outline-offset: -2px;
+  transform: translateY(0);
+  transition:
+    max-width 170ms ease,
+    max-height 150ms ease,
+    margin 170ms ease,
+    padding 150ms ease,
+    transform 150ms ease,
+    background-color 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.songyun-outline-tab::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: 3px;
+  border-right: 1px solid rgba(var(--song-line-rgb, 216, 205, 189), 0.25);
+  background: rgba(var(--song-warm-gray-rgb, 142, 128, 117), 0.08);
+  opacity: 0;
+  transition: opacity 120ms ease;
+  pointer-events: none;
+}
+
+.songyun-outline-tab::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 6px;
+  height: 6px;
+  border-radius: 0 0 4px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--song-warm-gray-rgb, 142, 128, 117), 0.15) 48%,
+    transparent 53%
+  );
+  opacity: 0;
+  transition: opacity 120ms ease;
+  pointer-events: none;
+}
+
+.songyun-outline-item.is-level-2 .songyun-outline-tab {
+  background-color: rgba(var(--song-celadon-rgb, 183, 197, 183), 0.14);
+}
+
+.songyun-outline-item.is-level-3 .songyun-outline-tab {
+  background-color: rgba(var(--song-warm-gray-rgb, 142, 128, 117), 0.1);
+}
+
+.songyun-outline-item:is(.is-level-4, .is-level-5, .is-level-6) .songyun-outline-tab {
+  background-color: rgba(var(--song-rouge-light-rgb, 183, 111, 106), 0.08);
+}
+
+.songyun-outline-item.is-current:not(:hover):not(:focus-within) .songyun-outline-tab {
+  max-width: calc(var(--songyun-paper-width) + 4px);
+  border-color: rgba(var(--song-rouge-light-rgb, 183, 111, 106), 0.72);
+  background-color: rgba(var(--song-rouge-light-rgb, 183, 111, 106), 0.2);
+  box-shadow: 0 0 0 1px rgba(var(--song-rouge-light-rgb, 183, 111, 106), 0.1);
+}
+
+.songyun-outline-tab:is(:hover, :focus-visible),
+.songyun-outline-item:focus-within .songyun-outline-tab {
+  max-width: var(--songyun-outline-label-max);
+  max-height: 44px;
+  margin-block: 5px;
+  padding: 4px 13px 4px 10px;
+  transform: translateY(-3px);
+  border-color: rgba(var(--song-warm-gray-rgb, 142, 128, 117), 0.3);
+  background-color: rgba(var(--song-paper-front-rgb, 248, 243, 233), 0.8);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.songyun-outline-item.is-current .songyun-outline-tab {
+  border-color: rgba(var(--song-rouge-light-rgb, 183, 111, 106), 0.72);
+  color: var(--song-accent, var(--text-accent));
+}
+
+.songyun-outline-tab:is(:hover, :focus-visible)::before,
+.songyun-outline-item:focus-within .songyun-outline-tab::before,
+.songyun-outline-tab:is(:hover, :focus-visible)::after,
+.songyun-outline-item:focus-within .songyun-outline-tab::after {
+  opacity: 1;
+}
+
+.songyun-outline-label {
+  display: -webkit-box;
+  max-width: calc(var(--songyun-outline-label-max) - 25px);
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  opacity: 0;
+  transition: opacity 80ms ease;
+}
+
+.songyun-outline-tab:is(:hover, :focus-visible) .songyun-outline-label,
+.songyun-outline-item:focus-within .songyun-outline-label {
+  opacity: 1;
+}
+
+.view-content.songyun-outline-host .markdown-reading-view .markdown-preview-sizer,
+.view-content.songyun-outline-host .markdown-source-view.mod-cm6 .cm-sizer {
+  margin-inline: clamp(3rem, 7.5vw, 6rem) auto !important;
+}
+
+@media (max-width: 760px) {
+  .songyun-outline {
+    left: 3px;
+    width: min(132px, 34vw);
+  }
+
+  .view-content.songyun-outline-host .markdown-reading-view .markdown-preview-sizer,
+  .view-content.songyun-outline-host .markdown-source-view.mod-cm6 .cm-sizer {
+    margin-inline: 0 auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .songyun-outline-tab,
+  .songyun-outline-tab::before,
+  .songyun-outline-tab::after,
+  .songyun-outline-label {
+    transition: none;
+  }
+}

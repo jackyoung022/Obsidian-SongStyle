@@ -22,7 +22,7 @@ settings:
   -
     id: song-hide-floating-toc
     title: 隐藏页边纸签目录
-    description: 默认显示。安装并启用 Floating TOC、位置设为左侧时生效；开启后隐藏该目录并取消左侧留白。
+    description: 默认显示。适用于 Songyun Outline 配套插件或旧版 Floating TOC；开启后隐藏目录并恢复正文居中。
     type: class-toggle
     default: false
 
@@ -1842,7 +1842,7 @@ button.mod-warning {
   }
 }
 
-/* ---------- Floating TOC: Songyun paper-tab outline ---------- */
+/* ---------- Legacy Floating TOC compatibility (1.2.4) ---------- */
 
 /* Style Settings: body.song-hide-floating-toc disables the optional plugin outline. */
 body.song-hide-floating-toc .workspace-leaf-content[data-type="markdown"] .floating-toc-div {

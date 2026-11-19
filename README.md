@@ -8,6 +8,8 @@ Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and 
 
 官方主题库名称为 [Songyun Qinghe](https://community.obsidian.md/themes/songyun-qinghe)，中文名为「宋韵·清和」。
 
+**配套插件：** [Songyun Outline 1.0.0](https://github.com/jackyoung022/Obsidian-SongStyle/releases/tag/songyun-outline-v1.0.0) 为主题提供可选的页边纸签目录。插件独立安装、独立更新，不参与主题包升级。
+
 ![宋韵·清和浅色模式](screenshots/obsidian-light.png)
 
 ## 深浅双色
@@ -24,7 +26,7 @@ Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and 
 - **层次化配色**：正文、次文字、标签、标题和代码各有独立色阶，不依赖大面积高饱和色。
 - **宋版标题**：标题使用宋体，浅色 H1 以绛红呈现，深色 H1 使用暖金；H2 以灰绿或青玉细竖线建立秩序。
 - **阅读优化**：正文行高、段距和行宽均为长文阅读调整，最大行宽可在 Style Settings 中调整。
-- **可选页边纸签目录**：配合 Floating TOC 在正文左侧显示紧凑纸签；静止时隐藏文字，悬停原位展开，当前章节轻微突出。
+- **可选页边纸签目录**：安装 **Songyun Outline** 配套插件后，在正文左侧显示紧凑纸签；静止时隐藏文字，悬停原位展开，当前章节轻微突出。
 - **完整 Markdown 样式**：覆盖引用、表格、任务列表、标签、脚注、Callout、代码块、嵌入内容和图片。
 - **展开书卷**：引用与 Callout 采用左右双轴、细边纸面和主题颗粒，保留提示类型与折叠操作，适配阅读和实时预览。
 - **深色模式**：独立黛蓝纸面、暖金标题、青玉链接与陶红交互，同时适配表格、代码、属性、弹窗和图标。
@@ -198,17 +200,20 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 
 - **正文栏宽度**：默认 `780px`，范围 `640–1040px`。
 - **使用 Obsidian 原生图标**：开启后恢复原生图标；默认关闭，显示宋韵图标。
-- **隐藏页边纸签目录**：默认关闭。安装并启用 Floating TOC、位置设为左侧时，开启此项可隐藏目录并取消左侧留白。
+- **隐藏页边纸签目录**：默认关闭。适用于 Songyun Outline 配套插件或旧版 Floating TOC，开启后隐藏目录并恢复正文居中。
 
 ### 页边纸签目录（可选）
 
-主题会为 [Floating TOC](https://github.com/PKM-er/obsidian-floating-toc-plugin) 提供龙鳞纸签样式，但目录的标题读取、展开、定位与滚动跟随由该插件完成，主题本身不生成动态目录。
+目录逻辑由仓库内独立的 [Songyun Outline](songyun-outline/README.md) 配套插件完成。它直接读取当前笔记标题、生成纸签、跟踪滚动位置并处理跳转，不依赖第三方目录插件。
 
 ![页边纸签目录](screenshots/floating-toc-paper.png)
 
-1. 安装并启用 Floating TOC。
-2. 在插件设置中把目录位置设为 **Left**。
-3. 如需关闭，在 Style Settings 的「宋韵·清和」设置中开启「隐藏页边纸签目录」。
+1. 从 [Songyun Outline 1.0.0 Release](https://github.com/jackyoung022/Obsidian-SongStyle/releases/tag/songyun-outline-v1.0.0) 下载 `Songyun-Outline-v1.0.0.zip`，或直接使用仓库中的 `songyun-outline/`。
+2. 将压缩包内的 `songyun-outline/` 文件夹放入 `<你的 Vault>/.obsidian/plugins/`。
+3. 在 Obsidian 的「设置 → 第三方插件」中重新加载并启用 **Songyun Outline**。
+4. 插件设置可分别控制阅读视图、编辑视图和移动端显示。
+
+主题 1.2.4 仍保留对旧版 Floating TOC 的兼容样式；安装 Songyun Outline 后无需再启用 Floating TOC。
 
 ### 恢复原生图标
 
@@ -240,6 +245,10 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 Obsidian-SongStyle/
 ├── README.md
 ├── LICENSE
+├── songyun-outline/           # 配套目录插件
+│   ├── main.js
+│   ├── manifest.json
+│   └── styles.css
 ├── manifest.json              # 官方目录读取的清单：Songyun Qinghe
 ├── theme.css                  # 可直接安装的完整主题，含内置图标
 ├── screenshot.png             # 512×288 商店预览
@@ -284,7 +293,7 @@ Obsidian-SongStyle/
 - 最低 Obsidian 版本：`1.6.0`
 - 实测版本：`1.14.4`（macOS）
 - 图标替换依赖现代 CSS `:has()` 选择器
-- 核心主题不依赖额外插件；可选的页边纸签目录需要 Floating TOC 与 Style Settings
+- 核心主题不依赖额外插件；可选的页边纸签目录需要 Songyun Outline 配套插件
 - 主题 CSS 不引用远程字体或图片
 
 ## 设计说明
