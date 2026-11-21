@@ -17,12 +17,12 @@ Song-inspired light and dark palettes with paper grain, scroll-style callouts, a
 
 Songyun Qinghe (宋韵·清和) brings the quiet colors and generous whitespace of Song-inspired aesthetics to Obsidian.
 
-- Warm paper, ink and rouge in light mode; blue-gray, ivory, warm gold and celadon in dark mode.
-- Fine paper grain, bundled directly in CSS for offline use.
+- Warm paper, ink and rouge in light mode; blue-gray, ivory, warm gold and celadon in dark mode, with additional Song palettes (Tianqing, Songyan, Qiye Moyu) in Style Settings.
+- Fine paper grain (adjustable intensity), bundled directly in CSS for offline use.
+- Song woodblock & stationery typography: double-line titles, fish-tail dividers, double-ruled tables, woodblock Properties headers, paper-mounted images, and ink-rubbing code blocks.
 - Scroll-style blockquotes and callouts, with the original folding and editing controls.
 - Matching line icons and folder scrolls that open and close with the folder.
-- Styles for headings, links, tags, tables, code blocks and properties.
-- Optional Style Settings controls for reading width, native icons, and the paper-tab outline.
+- Global and per-note stationery layouts (`song-letter`, `song-book`, `song-vertical`, `song-plain`), plus optional Chinese emphasis-dot annotation, first-line indent, and CJK ordered list numerals.
 - Optional Songyun Outline companion plugin adds the theme's compact paper-tab outline without depending on a third-party TOC plugin.
 
 No remote fonts or images are loaded. Recommended fonts are listed in the README and are optional. Font fallbacks are included.

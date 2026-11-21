@@ -2,7 +2,7 @@
 
 > 一套以宋式审美为线索的 Obsidian 主题。白日暖纸墨字，夜读黛蓝米白，以书卷、细线与留白承接文字。
 
-**版本：1.2.4** · 适配 Obsidian 1.6+ · [MIT License](LICENSE)
+**版本：1.3.0** · 适配 Obsidian 1.6+ · [MIT License](LICENSE)
 
 Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and dark palettes, paper grain, scroll-style callouts, and matching line icons. It works offline and does not load remote fonts or images.
 
@@ -22,9 +22,10 @@ Songyun Qinghe is a community-made, Song-inspired Obsidian theme with light and 
 
 ## 特点
 
-- **宋式纸面**：深浅色模式共用 128px 均匀细颗粒，浅色为暖纸底、深色为黛蓝底；深色用明暗颗粒与柔光混合增强纹理。
-- **层次化配色**：正文、次文字、标签、标题和代码各有独立色阶，不依赖大面积高饱和色。
-- **宋版标题**：标题使用宋体，浅色 H1 以绛红呈现，深色 H1 使用暖金；H2 以灰绿或青玉细竖线建立秩序。
+- **宋式纸面与五套传统色**：深浅色模式共用 128px 均匀细颗粒并支持浓淡切换；除默认「清和」「灯下观书」外，新增浅色「天青」「松烟」与深色「漆夜墨玉」。
+- **宋版刻本秩序与素笺气韵**：宽屏写作区默认呈现极淡素笺栏线；主标题与 H1 采用文武双线及朱印起笔，H2 为双丝栏竖线，分割线为内联 SVG 花鱼尾纹，表格为文武双线乌丝栏，属性区为卷首牌记。
+- **读书圈点与册页装裱**：图片自带宣纸/黛青细边装裱与题跋图注，代码块转为碑拓双细内栏，空状态页置入淡墨远山方印微景；支持朱批高亮、书签题签标签、朱砂落印复选框与可选中文着重号批注。
+- **全局与单篇笺纸版式**：可在 Style Settings 一键切换全局默认版式（素笺工作笔记 / 清笺 / 刻本 / 竖排诗词），亦可按单篇笔记通过 `cssclasses`（`song-letter`、`song-book`、`song-vertical`、`song-plain`）单独指定。
 - **阅读优化**：正文行高、段距和行宽均为长文阅读调整，最大行宽可在 Style Settings 中调整。
 - **可选页边纸签目录**：安装 **Songyun Outline** 配套插件后，在正文左侧显示紧凑纸签；静止时隐藏文字，悬停原位展开，当前章节轻微突出。
 - **完整 Markdown 样式**：覆盖引用、表格、任务列表、标签、脚注、Callout、代码块、嵌入内容和图片。
@@ -162,7 +163,7 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 
 ### 方式三：发布包
 
-下载仓库中的 [`dist/Obsidian-SongStyle-v1.2.4.zip`](dist/Obsidian-SongStyle-v1.2.4.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
+下载仓库中的 [`dist/Obsidian-SongStyle-v1.3.0.zip`](dist/Obsidian-SongStyle-v1.3.0.zip)。发布包使用 ASCII 文件名以兼容跨平台解压：
 
 - 将 `Songyun-Qinghe/` 复制到 `.obsidian/themes/`。
 - 图标已内置，`snippets/songyun-icons.css` 为可选的独立片段。
@@ -196,11 +197,21 @@ cp -R Obsidian-SongStyle/宋韵·清和 "$VAULT/.obsidian/themes/"
 
 ### Style Settings（可选）
 
-安装 [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) 后，在主题设置里可以调整：
+安装 [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) 后，在「宋韵·清和」设置里可以调整：
 
-- **正文栏宽度**：默认 `780px`，范围 `640–1040px`。
-- **使用 Obsidian 原生图标**：开启后恢复原生图标；默认关闭，显示宋韵图标。
-- **隐藏页边纸签目录**：默认关闭。适用于 Songyun Outline 配套插件或旧版 Floating TOC，开启后隐藏目录并恢复正文居中。
+- **色韵与纸面**：
+  - **浅色纸韵**：`清和（暖宣 · 绛红，默认）` / `天青（汝窑 · 淡赭）` / `松烟（竹纸 · 竹青）`
+  - **深色夜韵**：`灯下观书（黛蓝 · 暖金，默认）` / `漆夜墨玉（玄墨 · 青玉）`
+  - **纸面颗粒浓淡**：`轻（默认）` / `柔` / `无`
+- **笺纸与排版**：
+  - **默认版式**：全局一键切换 `素笺 · 工作笔记（默认）` / `清笺 · 朱丝双线` / `刻本 · 宋版古籍` / `竖排 · 诗词摘钞`
+  - **正文栏宽度**：默认 `780px`，范围 `640–1040px`
+  - **关闭写作区素笺边栏**、**中文圈点批注（着重号替代斜体）**、**长文首行缩进两字**、**汉字一级序号（一、二、三）**
+- **界面与配件**：
+  - **使用 Obsidian 原生图标**：开启后恢复原生图标；默认关闭，显示宋韵图标
+  - **隐藏页边纸签目录**：默认关闭。适用于 Songyun Outline 配套插件或旧版 Floating TOC
+
+单篇笔记也可以在顶部属性 `cssclasses` 中写入 `song-letter`、`song-book`、`song-vertical` 或 `song-plain` 单独覆盖全局版式。示例笔记见 [`examples/宋韵笺纸与古籍展示.md`](examples/宋韵笺纸与古籍展示.md)。
 
 ### 页边纸签目录（可选）
 
@@ -283,9 +294,10 @@ Obsidian-SongStyle/
 ├── examples/
 │   ├── 宋韵主题预览.md
 │   ├── 宋韵深色主题预览.md
-│   └── 宋韵书卷展示.md
+│   ├── 宋韵书卷展示.md
+│   └── 宋韵笺纸与古籍展示.md
 └── dist/
-    └── Obsidian-SongStyle-v1.2.4.zip
+    └── Obsidian-SongStyle-v1.3.0.zip
 ```
 
 ## 兼容性
@@ -304,6 +316,14 @@ Obsidian-SongStyle/
 - 预览截图使用仓库内的示例笔记，不包含个人笔记内容。
 
 ## 更新记录
+
+### 1.3.0
+
+- 深化宋版刻本与笺纸版式：宽屏写作区新增极淡素笺边栏与天头细线；主标题与 H1 升级为文武双线与朱印起笔，H2 改为双丝栏竖线，H3 前置空心小菱符；分割线升级为内联 SVG 宋版花鱼尾纹；表格改为文武双线乌丝栏；文档属性区升级为卷首牌记双线框。
+- 融入传统读书圈点与册页装裱：内容图片自带宣纸/黛青细边装裱与题跋图注；优化朱批高亮、淡朱删除线、书签题签标签、分级列表符号与朱砂落印复选框。
+- 界面细节转译：代码块改为碑拓双细内栏，空状态页置入纯内联 SVG 淡墨远山方印徽记，活动标签页微调为册页折口双线。
+- 扩展 Style Settings：新增浅色「天青」「松烟」与深色「漆夜墨玉」传统色预设、纸纹浓淡三档调节、全局默认版式一键切换，以及中文圈点着重号、首行缩进、汉字一级序号等可选开关。
+- 新增单篇 `cssclasses` 笺纸模式：`song-letter`（清笺）、`song-book`（刻本）、`song-vertical`（竖排诗词）与 `song-plain`（回归素净），并新增示例笔记 `examples/宋韵笺纸与古籍展示.md`。
 
 ### 1.2.4
 

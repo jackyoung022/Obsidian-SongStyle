@@ -43,6 +43,7 @@ def main():
         "宋韵主题预览.md": "light-preview.md",
         "宋韵深色主题预览.md": "dark-preview.md",
         "宋韵书卷展示.md": "scroll-block-preview.md",
+        "宋韵笺纸与古籍展示.md": "stationery-preview.md",
     }
 
     def portable_readme(text):
